@@ -92,7 +92,7 @@
 
   .prod-top{display:flex;gap:18px;align-items:center;margin-bottom:18px}
   .prod-img{width:140px;height:140px;border-radius:16px;background:linear-gradient(135deg,#f5f8fc,#fff);border:1px solid var(--line);flex-shrink:0;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:8px}
-  .prod-img svg{width:100%;height:100%;display:block}
+  .prod-img img{width:100%;height:100%;object-fit:contain;display:block}
   .prod-info{flex:1;min-width:0}
   .prod-name{font-weight:800;font-size:20px;letter-spacing:-.3px;color:var(--ink);line-height:1.2;margin-bottom:8px}
   .score-row{display:flex;align-items:center;gap:10px;margin-bottom:6px}
@@ -145,7 +145,7 @@
   .mini-winner{display:flex;align-items:center;gap:16px;background:#fff;border:2px solid var(--med-blue);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow);margin:18px 0 28px;position:relative}
   .mini-winner::before{content:"🏆";position:absolute;top:-14px;left:18px;background:var(--med-blue);color:#fff;font-size:13px;padding:4px 11px 4px 10px;border-radius:50px;font-weight:800;letter-spacing:.3px;box-shadow:var(--shadow-sm)}
   .mini-winner .mi{width:74px;height:74px;border-radius:12px;background:#fff;border:1px solid var(--line);padding:5px;flex-shrink:0;overflow:hidden}
-  .mini-winner .mi svg{width:100%;height:100%;display:block}
+  .mini-winner .mi img{width:100%;height:100%;object-fit:contain;display:block}
   .mini-winner .mtxt{flex:1;min-width:0}
   .mini-winner .mtxt b{display:block;font-size:16px;font-weight:800;color:var(--ink);line-height:1.2}
   .mini-winner .mtxt span{font-size:13px;color:var(--muted);font-weight:600}
@@ -183,7 +183,7 @@
   .sticky .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px}
   .sticky .si{display:flex;align-items:center;gap:11px;min-width:0}
   .sticky .si .pi{width:44px;height:44px;border-radius:10px;background:#fff;border:1px solid var(--line);padding:4px;flex-shrink:0;overflow:hidden}
-  .sticky .si .pi svg{width:100%;height:100%;display:block}
+  .sticky .si .pi img{width:100%;height:100%;object-fit:contain;display:block}
   .sticky .si .txt{min-width:0}
   .sticky .si .txt b{font-size:14px;font-weight:800;color:var(--ink);display:flex;align-items:center;gap:5px;line-height:1.1;white-space:nowrap}
   .sticky .si .txt span{font-size:12.5px;font-weight:700;color:var(--ink-soft)}
@@ -208,7 +208,7 @@
 <header class="masthead">
   <div class="wrap">
     <div class="logo">
-      <img class="mark" src="logo.png" alt="">
+      <img class="mark" src="logo.png" alt="Verbraucher Fokus Test">
       <span>Verbraucher Fokus Test<small>Vergleich &amp; Bewertung</small></span>
     </div>
     <span class="badge">✓ Redaktionell geprüft</span>
@@ -278,26 +278,7 @@
       <div class="card-body">
         <div class="prod-top">
           <div class="prod-img">
-            <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="boxA" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#f5f8fc"/>
-                </linearGradient>
-                <linearGradient id="capA" x1="0" y1="0" x2="1" y2="0">
-                  <stop offset="0" stop-color="#11998e"/><stop offset="1" stop-color="#0b6cb8"/>
-                </linearGradient>
-              </defs>
-              <rect x="20" y="30" width="120" height="108" rx="9" fill="rgba(15,28,46,.08)" transform="translate(2 5)"/>
-              <rect x="20" y="30" width="120" height="108" rx="9" fill="url(#boxA)" stroke="#e3e9f0"/>
-              <path d="M20 39 Q20 30 29 30 L131 30 Q140 30 140 39 L140 56 L20 56 Z" fill="url(#capA)"/>
-              <circle cx="33" cy="43" r="3" fill="#fff" opacity=".7"/>
-              <text x="80" y="84" text-anchor="middle" font-family="Newsreader,serif" font-size="20" font-weight="700" fill="#0f1c2e">Altuva</text>
-              <text x="80" y="98" text-anchor="middle" font-family="Manrope,sans-serif" font-size="6.5" font-weight="800" fill="#697789" letter-spacing="1.5">PREMIUM PFLASTER</text>
-              <line x1="48" y1="106" x2="112" y2="106" stroke="#e3e9f0"/>
-              <circle cx="80" cy="121" r="10" fill="#e7f6ee" stroke="#1f9d57" stroke-width="1.4"/>
-              <text x="80" y="124.5" text-anchor="middle" font-size="11">🌿</text>
-              <text x="80" y="135" text-anchor="middle" font-family="Manrope" font-size="6.5" font-weight="700" fill="#697789">30 Pflaster</text>
-            </svg>
+            <img src="3.png" alt="Altuva Abnehmpflaster — 30 Metabolic Support Patches">
           </div>
           <div class="prod-info">
             <div class="prod-name">Altuva Abnehmpflaster</div>
@@ -342,26 +323,7 @@
       <div class="card-body">
         <div class="prod-top">
           <div class="prod-img">
-            <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="boxB" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#f5f8fc"/>
-                </linearGradient>
-                <linearGradient id="capB" x1="0" y1="0" x2="1" y2="0">
-                  <stop offset="0" stop-color="#5b8bb8"/><stop offset="1" stop-color="#3d6790"/>
-                </linearGradient>
-              </defs>
-              <rect x="20" y="30" width="120" height="108" rx="9" fill="rgba(15,28,46,.07)" transform="translate(2 5)"/>
-              <rect x="20" y="30" width="120" height="108" rx="9" fill="url(#boxB)" stroke="#e3e9f0"/>
-              <path d="M20 39 Q20 30 29 30 L131 30 Q140 30 140 39 L140 56 L20 56 Z" fill="url(#capB)"/>
-              <circle cx="33" cy="43" r="3" fill="#fff" opacity=".6"/>
-              <text x="80" y="84" text-anchor="middle" font-family="Newsreader,serif" font-size="18" font-weight="700" fill="#0f1c2e">Pflaster B</text>
-              <text x="80" y="98" text-anchor="middle" font-family="Manrope" font-size="6.5" font-weight="800" fill="#697789" letter-spacing="1.5">PLATZHALTER</text>
-              <line x1="48" y1="106" x2="112" y2="106" stroke="#e3e9f0"/>
-              <circle cx="80" cy="121" r="10" fill="#eef4fb" stroke="#5b8bb8" stroke-width="1.4"/>
-              <text x="80" y="124.5" text-anchor="middle" font-size="11">💧</text>
-              <text x="80" y="135" text-anchor="middle" font-family="Manrope" font-size="6.5" font-weight="700" fill="#697789">30 Pflaster</text>
-            </svg>
+            <img src="2.png" alt="Pflaster B — Weight Loss Sticker">
           </div>
           <div class="prod-info">
             <div class="prod-name">Pflaster B</div>
@@ -393,26 +355,7 @@
       <div class="card-body">
         <div class="prod-top">
           <div class="prod-img">
-            <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="boxC" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#f5f8fc"/>
-                </linearGradient>
-                <linearGradient id="capC" x1="0" y1="0" x2="1" y2="0">
-                  <stop offset="0" stop-color="#8d6dbf"/><stop offset="1" stop-color="#6748a0"/>
-                </linearGradient>
-              </defs>
-              <rect x="20" y="30" width="120" height="108" rx="9" fill="rgba(15,28,46,.07)" transform="translate(2 5)"/>
-              <rect x="20" y="30" width="120" height="108" rx="9" fill="url(#boxC)" stroke="#e3e9f0"/>
-              <path d="M20 39 Q20 30 29 30 L131 30 Q140 30 140 39 L140 56 L20 56 Z" fill="url(#capC)"/>
-              <circle cx="33" cy="43" r="3" fill="#fff" opacity=".6"/>
-              <text x="80" y="84" text-anchor="middle" font-family="Newsreader,serif" font-size="18" font-weight="700" fill="#0f1c2e">Pflaster C</text>
-              <text x="80" y="98" text-anchor="middle" font-family="Manrope" font-size="6.5" font-weight="800" fill="#697789" letter-spacing="1.5">PLATZHALTER</text>
-              <line x1="48" y1="106" x2="112" y2="106" stroke="#e3e9f0"/>
-              <circle cx="80" cy="121" r="10" fill="#f3edfa" stroke="#8d6dbf" stroke-width="1.4"/>
-              <text x="80" y="124.5" text-anchor="middle" font-size="11">✨</text>
-              <text x="80" y="135" text-anchor="middle" font-family="Manrope" font-size="6.5" font-weight="700" fill="#697789">30 Pflaster</text>
-            </svg>
+            <img src="1.png" alt="Pflaster C — Slimming Patch">
           </div>
           <div class="prod-info">
             <div class="prod-name">Pflaster C</div>
@@ -447,16 +390,7 @@
 
     <div class="mini-winner">
       <div class="mi">
-        <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="boxA2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#f5f8fc"/></linearGradient>
-            <linearGradient id="capA2" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#11998e"/><stop offset="1" stop-color="#0b6cb8"/></linearGradient>
-          </defs>
-          <rect x="20" y="30" width="120" height="108" rx="9" fill="url(#boxA2)" stroke="#e3e9f0"/>
-          <path d="M20 39 Q20 30 29 30 L131 30 Q140 30 140 39 L140 56 L20 56 Z" fill="url(#capA2)"/>
-          <text x="80" y="92" text-anchor="middle" font-family="Newsreader,serif" font-size="22" font-weight="700" fill="#0f1c2e">Altuva</text>
-          <text x="80" y="106" text-anchor="middle" font-family="Manrope" font-size="7" font-weight="800" fill="#697789" letter-spacing="1.5">PREMIUM PFLASTER</text>
-        </svg>
+        <img src="4.png" alt="Altuva Abnehmpflaster">
       </div>
       <div class="mtxt">
         <b>Altuva Abnehmpflaster</b>
@@ -526,15 +460,7 @@
   <div class="wrap">
     <div class="si">
       <div class="pi">
-        <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="boxA3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#f5f8fc"/></linearGradient>
-            <linearGradient id="capA3" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#11998e"/><stop offset="1" stop-color="#0b6cb8"/></linearGradient>
-          </defs>
-          <rect x="20" y="30" width="120" height="108" rx="9" fill="url(#boxA3)" stroke="#e3e9f0"/>
-          <path d="M20 39 Q20 30 29 30 L131 30 Q140 30 140 39 L140 56 L20 56 Z" fill="url(#capA3)"/>
-          <text x="80" y="100" text-anchor="middle" font-family="Newsreader,serif" font-size="26" font-weight="700" fill="#0f1c2e">Altuva</text>
-        </svg>
+        <img src="3.png" alt="Altuva Abnehmpflaster">
       </div>
       <div class="txt">
         <b>🏆 Altuva · Platz 1</b>
