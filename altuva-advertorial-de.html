@@ -91,8 +91,7 @@
   .card.winner .card-body{padding-top:20px}
 
   .prod-top{display:flex;gap:18px;align-items:center;margin-bottom:18px}
-  .prod-img{width:140px;height:140px;border-radius:16px;background:linear-gradient(135deg,#f5f8fc,#fff);border:1px solid var(--line);flex-shrink:0;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:8px}
-  .prod-img img{width:100%;height:100%;object-fit:contain;display:block}
+  .prod-img{width:140px;height:140px;flex-shrink:0;display:block;object-fit:contain;object-position:center}
   .prod-info{flex:1;min-width:0}
   .prod-name{font-weight:800;font-size:20px;letter-spacing:-.3px;color:var(--ink);line-height:1.2;margin-bottom:8px}
   .score-row{display:flex;align-items:center;gap:10px;margin-bottom:6px}
@@ -144,8 +143,7 @@
 
   .mini-winner{display:flex;align-items:center;gap:16px;background:#fff;border:2px solid var(--med-blue);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow);margin:18px 0 28px;position:relative}
   .mini-winner::before{content:"🏆";position:absolute;top:-14px;left:18px;background:var(--med-blue);color:#fff;font-size:13px;padding:4px 11px 4px 10px;border-radius:50px;font-weight:800;letter-spacing:.3px;box-shadow:var(--shadow-sm)}
-  .mini-winner .mi{width:74px;height:74px;border-radius:12px;background:#fff;border:1px solid var(--line);padding:5px;flex-shrink:0;overflow:hidden}
-  .mini-winner .mi img{width:100%;height:100%;object-fit:contain;display:block}
+  .mini-winner .mi{width:74px;height:74px;flex-shrink:0;display:block;object-fit:contain;object-position:center}
   .mini-winner .mtxt{flex:1;min-width:0}
   .mini-winner .mtxt b{display:block;font-size:16px;font-weight:800;color:var(--ink);line-height:1.2}
   .mini-winner .mtxt span{font-size:13px;color:var(--muted);font-weight:600}
@@ -182,20 +180,96 @@
   .sticky.show{transform:translateY(0)}
   .sticky .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px}
   .sticky .si{display:flex;align-items:center;gap:11px;min-width:0}
-  .sticky .si .pi{width:44px;height:44px;border-radius:10px;background:#fff;border:1px solid var(--line);padding:4px;flex-shrink:0;overflow:hidden}
-  .sticky .si .pi img{width:100%;height:100%;object-fit:contain;display:block}
+  .sticky .si .pi{width:44px;height:44px;flex-shrink:0;display:block;object-fit:contain;object-position:center}
   .sticky .si .txt{min-width:0}
   .sticky .si .txt b{font-size:14px;font-weight:800;color:var(--ink);display:flex;align-items:center;gap:5px;line-height:1.1;white-space:nowrap}
   .sticky .si .txt span{font-size:12.5px;font-weight:700;color:var(--ink-soft)}
   .sticky .cta{width:auto;padding:13px 22px;font-size:15px;flex-shrink:0;white-space:nowrap;border-radius:11px}
   @media (max-width:520px){
-    .sticky .si .txt b{font-size:13px}
-    .sticky .cta{padding:12px 16px;font-size:14px}
-    .prod-top{flex-direction:column;align-items:flex-start;text-align:left}
-    .prod-img{width:100%;height:160px;padding:14px}
-    .ingredient-grid{grid-template-columns:1fr}
-    .mini-winner{flex-wrap:wrap}
-    .mini-winner .mscore{margin-left:auto}
+    body{font-size:16px}
+    .wrap{padding:0 16px}
+    .masthead{padding:14px 0}
+    .logo{font-size:16px}
+    .logo .mark,.logo img.mark{width:30px;height:30px}
+    .masthead .badge{font-size:10.5px;padding:5px 9px}
+    .hero{padding:26px 0 20px}
+    h1.hero-title{font-size:25px;margin-bottom:12px}
+    .hero-sub{font-size:15.5px;line-height:1.5}
+    .hero-meta{margin-top:16px;padding-top:14px;gap:10px}
+    .hero-meta .m{font-size:12.5px}
+    .author-row{margin-top:14px}
+    .author-row .info{font-size:12.5px}
+    p.body{font-size:15.5px;margin-bottom:12px}
+    .punch{font-size:18px;margin:14px 0;padding-left:14px}
+    .nostress{font-size:17px;margin:14px 0}
+    .criteria{padding:14px 16px;margin:14px 0}
+    .criteria li{font-size:14px}
+    .reveal{font-size:16px}
+    .h2{font-size:22px}
+    .rank-head{margin-bottom:18px}
+    .rank-head p{font-size:13px}
+    .card{margin-bottom:16px}
+    .card-body{padding:14px 16px 16px}
+    .ribbon{padding:8px 14px;font-size:11.5px}
+    .rank-tag{padding:10px 16px 0;font-size:12px}
+    .prod-top{flex-direction:column;align-items:stretch;gap:8px;margin-bottom:12px}
+    .prod-img{
+      order:-1;
+      width:100%;
+      max-width:260px;
+      height:auto;
+      max-height:200px;
+      margin:0 auto 2px;
+    }
+    .prod-info{text-align:center}
+    .prod-name{font-size:16px;margin-bottom:4px}
+    .score-row{justify-content:center;margin-bottom:0}
+    .score-badge{width:46px;height:46px;border-radius:11px}
+    .score-badge b{font-size:17px}
+    .score-txt{font-size:12.5px}
+    .stars{font-size:12px}
+    .price-now{font-size:22px}
+    .price-old{font-size:14px}
+    .price-day{font-size:12.5px;margin-bottom:12px}
+    .feat{gap:10px;margin:12px 0}
+    .feat li{font-size:13.5px;gap:10px}
+    .feat li .ic{width:20px;height:20px;font-size:11px}
+    .cons{padding:10px 12px;margin:10px 0 0}
+    .cons li{font-size:13px}
+    .cta-wrap{margin-top:14px}
+    .cta{padding:14px 16px;font-size:15px}
+    .trustline{gap:10px;margin-top:10px}
+    .trustline .t{font-size:11.5px}
+    .recap{padding:28px 0 30px}
+    .recap-tag{font-size:11px;padding:6px 12px;margin-bottom:12px}
+    .mini-winner{
+      flex-direction:column;
+      align-items:center;
+      text-align:center;
+      gap:10px;
+      padding:22px 14px 14px;
+      margin:14px 0 20px;
+    }
+    .mini-winner::before{left:50%;transform:translateX(-50%);white-space:nowrap}
+    .mini-winner .mi{
+      order:-1;
+      width:min(85vw,220px);
+      height:auto;
+      max-height:220px;
+      margin-top:4px;
+    }
+    .mini-winner .mtxt b{font-size:15px}
+    .mini-winner .mtxt span{font-size:12px}
+    .mini-winner .mscore{font-size:24px;margin-left:0}
+    .ingredient-grid{grid-template-columns:1fr;gap:10px;margin:16px 0}
+    .ing{padding:12px 14px}
+    .ben{padding:12px 14px;gap:12px}
+    .ben b{font-size:14px}
+    .how-box{padding:14px 16px;margin:14px 0}
+    .sticky .si .txt b{font-size:12.5px}
+    .sticky .si .txt span{font-size:11.5px}
+    .sticky .si .pi{width:40px;height:40px}
+    .sticky .cta{padding:11px 14px;font-size:13px}
   }
 </style>
 </head>
@@ -277,9 +351,7 @@
       </div>
       <div class="card-body">
         <div class="prod-top">
-          <div class="prod-img">
-            <img src="3.png" alt="Altuva Abnehmpflaster — 30 Metabolic Support Patches">
-          </div>
+          <img class="prod-img" src="3.png" alt="Altuva Abnehmpflaster — 30 Metabolic Support Patches">
           <div class="prod-info">
             <div class="prod-name">Altuva Abnehmpflaster</div>
             <div class="score-row">
@@ -322,9 +394,7 @@
       <div class="rank-tag"><span class="num">2</span>Platz 2</div>
       <div class="card-body">
         <div class="prod-top">
-          <div class="prod-img">
-            <img src="2.png" alt="Pflaster B — Weight Loss Sticker">
-          </div>
+          <img class="prod-img" src="2.png" alt="Pflaster B — Weight Loss Sticker">
           <div class="prod-info">
             <div class="prod-name">Pflaster B</div>
             <div class="score-row">
@@ -354,9 +424,7 @@
       <div class="rank-tag"><span class="num">3</span>Platz 3</div>
       <div class="card-body">
         <div class="prod-top">
-          <div class="prod-img">
-            <img src="1.png" alt="Pflaster C — Slimming Patch">
-          </div>
+          <img class="prod-img" src="1.png" alt="Pflaster C — Slimming Patch">
           <div class="prod-info">
             <div class="prod-name">Pflaster C</div>
             <div class="score-row">
@@ -389,9 +457,7 @@
     <h2 class="h2">Warum das <span class="em">Altuva Patch</span> Platz 1 einnimmt</h2>
 
     <div class="mini-winner">
-      <div class="mi">
-        <img src="4.png" alt="Altuva Abnehmpflaster">
-      </div>
+      <img class="mi" src="4.png" alt="Altuva Abnehmpflaster">
       <div class="mtxt">
         <b>Altuva Abnehmpflaster</b>
         <span>Platz 1 · Redaktions-Empfehlung · Exzellente Bewertungen</span>
@@ -459,9 +525,7 @@
 <div class="sticky" id="sticky">
   <div class="wrap">
     <div class="si">
-      <div class="pi">
-        <img src="3.png" alt="Altuva Abnehmpflaster">
-      </div>
+      <img class="pi" src="3.png" alt="Altuva Abnehmpflaster">
       <div class="txt">
         <b>🏆 Altuva · Platz 1</b>
         <span>Redaktions-Empfehlung · 9,9/10</span>
