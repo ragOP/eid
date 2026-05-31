@@ -309,7 +309,8 @@
   .note-byline .bn b{color:var(--ink);font-weight:700;display:block;font-size:14.5px}
   .note-byline .bn span{color:var(--muted);font-size:12.5px;font-weight:600}
 </style>
-</head>
+</head> 
+
 <body>
 
 <!-- TOP TRUST BAR -->
@@ -629,5 +630,28 @@
   obs.observe(winner);
 </script>
 
+<script>
+  (function () {
+    var headlines = {
+      ag1: 'Abnehmpflaster im großen Erfahrungs-Check 2026 — <em>eines hat sich klar abgehoben</em>',
+      ag3: 'Berberin-Pflaster im Vergleich 2026 — <em>eines hat sich klar abgehoben</em>',
+      ag4: 'Das beste Abnehmpflaster 2026 — <em>Vergleichssieger &amp; wo kaufen</em>'
+      // ag2 and ag5 are left out on purpose -> they keep your default headline
+    };
+    function getParam(name) {
+      var m = new RegExp('[?&]' + name + '=([^&]+)').exec(window.location.search);
+      return m ? decodeURIComponent(m[1].replace(/\+/g, ' ')).toLowerCase() : '';
+    }
+    function run() {
+      var key = getParam('h');
+      if (!headlines[key]) return; // missing/unknown param -> default page, untouched
+      var el = document.getElementById('dyn-headline') || document.querySelector('h1');
+      if (el) el.innerHTML = headlines[key];
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', run);
+    } else { run(); }
+  })();
+  </script>
 </body>
 </html>
