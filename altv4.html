@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b6cb8">
+<title>Abnehmpflaster im Vergleich 2026 — Unabhängige Bewertung | Verbraucher Fokus Test</title>
+<style>
+  :root{
+    /* blue does the work, gold is a restrained 1st-place accent only */
+    --blue:#0b6cb8;
+    --blue-dark:#075596;
+    --blue-soft:#eef5fb;
+    --blue-tint:#f6fafd;
+    --gold:#b8862b;
+    --gold-soft:#faf3e1;
+    --gold-line:#ecdcb0;
+    --green:#1f9d57;
+    --green-soft:#e9f6ee;
+    --red:#d9342b;
+    --red-soft:#fdeceb;
+    --ink:#16212e;
+    --muted:#5d6b7a;
+    --line:#e4e9f0;
+    --bg:#f5f8fb;
+    --card:#ffffff;
+    --radius:14px;
+    --shadow:0 3px 14px rgba(16,42,67,.07);
+    --shadow-lg:0 8px 30px rgba(16,42,67,.11);
+    --maxw:740px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);background:var(--bg);line-height:1.62;
+    font-size:17px;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+
+  /* ---------- top trust bar ---------- */
+  .topbar{background:var(--blue);color:#fff;text-align:center;font-size:13px;
+    padding:9px 12px;font-weight:500;letter-spacing:.2px}
+
+  /* ---------- header ---------- */
+  header.site{background:#fff;border-bottom:1px solid var(--line);padding:14px 0;position:relative;z-index:5}
+  .site .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px}
+  .brand .logo{width:38px;height:38px;border-radius:9px;background:var(--blue);
+    display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:16px}
+  .brand .bname{font-weight:800;font-size:17px;line-height:1.1}
+  .brand .bsub{font-size:11px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+  .checked-badge{display:inline-flex;align-items:center;gap:6px;background:var(--green-soft);
+    color:var(--green);font-size:12px;font-weight:700;padding:6px 11px;border-radius:30px;white-space:nowrap}
+
+  /* ---------- section rhythm ---------- */
+  section{padding:38px 0}
+  section.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .eyebrow{display:inline-block;background:var(--blue-soft);color:var(--blue);
+    font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.8px;
+    padding:6px 13px;border-radius:30px;margin-bottom:16px}
+  h1{font-size:29px;line-height:1.25;font-weight:800;letter-spacing:-.4px;margin-bottom:18px}
+  h1 em{color:var(--blue);font-style:italic}
+  h2{font-size:23px;line-height:1.3;font-weight:800;letter-spacing:-.2px;margin-bottom:10px}
+  h2 em{color:var(--blue);font-style:italic}
+  h3{font-size:18px;font-weight:800;margin-bottom:8px;line-height:1.35}
+  p{margin-bottom:15px;color:#28323d}
+  p:last-child{margin-bottom:0}
+  .lead{font-size:18px;color:#222c37}
+  .muted{color:var(--muted)}
+  .sub-lead{color:var(--muted);font-size:15px;margin-top:-4px;margin-bottom:18px}
+
+  /* ---------- author byline ---------- */
+  .byline{display:flex;align-items:center;gap:13px;background:#fff;border:1px solid var(--line);
+    border-radius:14px;padding:14px 16px;box-shadow:var(--shadow);margin:22px 0}
+  .byline .avatar{width:50px;height:50px;border-radius:50%;flex:none;
+    background:var(--blue);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:18px}
+  .byline .meta{flex:1;min-width:0}
+  .byline .meta .nm{font-weight:800;font-size:15px}
+  .byline .meta .rl{font-size:13px;color:var(--muted)}
+  .byline .meta .stars{color:var(--gold);font-size:13px;letter-spacing:1px;margin-top:3px}
+  .byline .tag{font-size:11px;font-weight:700;color:var(--green);background:var(--green-soft);
+    padding:5px 10px;border-radius:20px;white-space:nowrap}
+
+  /* ---------- stat strip ---------- */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:24px 0}
+  .stat{background:#fff;border:1px solid var(--line);border-radius:12px;padding:15px 8px;text-align:center}
+  .stat .big{font-size:20px;font-weight:800;color:var(--blue);line-height:1.1}
+  .stat .lbl{font-size:11px;color:var(--muted);font-weight:600;margin-top:4px;line-height:1.3}
+
+  /* ---------- chips ---------- */
+  .chips{display:flex;flex-wrap:wrap;gap:9px;margin:18px 0}
+  .chip{background:var(--blue-soft);color:var(--blue);border-radius:30px;padding:7px 14px;
+    font-size:13.5px;font-weight:700}
+
+  /* ---------- panels & lists ---------- */
+  .panel{background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px 20px;box-shadow:var(--shadow);margin:22px 0}
+  .panel .ph{font-weight:800;font-size:15px;display:flex;align-items:center;gap:8px;
+    margin-bottom:6px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+  ul.checks{list-style:none}
+  ul.checks li{position:relative;padding:11px 0 11px 34px;font-size:15.5px;
+    line-height:1.6;border-bottom:1px solid var(--line)}
+  ul.checks li:last-child{border-bottom:none;padding-bottom:0}
+  ul.checks li:first-child{padding-top:2px}
+  ul.checks li::before{content:"✓";position:absolute;left:0;top:11px;color:var(--green);
+    font-weight:800;width:22px;height:22px;background:var(--green-soft);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;font-size:12px}
+  ul.checks li:first-child::before{top:2px}
+  ul.cons li::before{content:"!";color:var(--red);background:var(--red-soft)}
+  ul.checks li b{font-weight:800}
+
+  .callout{font-weight:700;font-size:16.5px;display:flex;gap:10px;align-items:flex-start;
+    margin:20px 0 0;line-height:1.5}
+
+  /* ---------- ranking cards ---------- */
+  .rank{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    box-shadow:var(--shadow);margin:22px 0;overflow:hidden}
+  .rank.win{border:2px solid var(--gold);box-shadow:var(--shadow-lg)}
+  .rank-flag{display:flex;align-items:center;gap:8px;padding:12px 18px;font-weight:800;font-size:13px;
+    text-transform:uppercase;letter-spacing:.5px}
+  .rank.win .rank-flag{background:var(--gold-soft);color:var(--gold);border-bottom:1px solid var(--gold-line)}
+  .rank:not(.win) .rank-flag{background:var(--blue-soft);color:var(--blue);border-bottom:1px solid var(--line)}
+  .rank-body{padding:20px 18px}
+  .rank-top{display:flex;gap:16px;align-items:flex-start}
+  .rank-img{width:100px;height:100px;flex:none;border-radius:12px;background:var(--bg);
+    border:1px solid var(--line);display:flex;align-items:center;justify-content:center;
+    font-size:30px;overflow:hidden}
+  .rank-img img{width:100%;height:100%;object-fit:cover}
+  .rank-name{font-size:20px;font-weight:800;line-height:1.2}
+  .score-row{display:flex;align-items:baseline;gap:7px;margin-top:8px}
+  .score{font-size:30px;font-weight:800;color:var(--blue);line-height:1}
+  .rank.win .score{color:var(--gold)}
+  .score-max{font-size:14px;color:var(--muted);font-weight:700}
+  .score-tag{font-size:12px;font-weight:800;color:var(--green);margin-left:2px}
+  .stars{color:var(--gold);letter-spacing:1.5px;font-size:15px;margin-top:6px}
+  .per-day{display:inline-flex;align-items:center;gap:6px;background:var(--blue-soft);color:var(--blue);
+    font-size:13px;font-weight:700;padding:7px 12px;border-radius:8px;margin-top:12px}
+  .price-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:14px 0 2px}
+  .price-now{font-size:24px;font-weight:800}
+  .price-old{font-size:15px;color:var(--muted);text-decoration:line-through}
+  .price-off{background:var(--red);color:#fff;font-size:12px;font-weight:800;padding:4px 9px;border-radius:7px}
+
+  /* sub-scores */
+  .subs{display:grid;grid-template-columns:repeat(2,1fr);gap:11px;margin:18px 0 4px}
+  .sub{background:var(--blue-tint);border:1px solid var(--line);border-radius:10px;padding:11px 12px}
+  .sub .sl{font-size:12.5px;color:var(--muted);font-weight:600;display:flex;justify-content:space-between;align-items:center}
+  .sub .sv{font-weight:800;color:var(--blue);font-size:14px}
+  .bar{height:6px;background:#e2e9f1;border-radius:6px;margin-top:8px;overflow:hidden}
+  .bar > i{display:block;height:100%;background:var(--blue);border-radius:6px}
+
+  .mini-head{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.6px;
+    color:var(--muted);margin:18px 0 4px}
+  .note-soft{background:var(--blue-tint);border:1px solid var(--line);border-radius:11px;
+    padding:14px 16px;margin-top:16px}
+  .note-soft .mini-head{margin-top:0}
+
+  /* CTA — always blue */
+  .cta{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;
+    background:var(--blue);color:#fff;font-size:18px;font-weight:800;text-decoration:none;
+    padding:17px;border-radius:12px;margin:20px 0 0;
+    box-shadow:0 5px 16px rgba(11,108,184,.28);transition:transform .12s,background .15s}
+  .cta:hover{background:var(--blue-dark);transform:translateY(-1px)}
+  .cta.sm{font-size:16px;padding:14px}
+  .momentum{text-align:center;font-size:13px;font-weight:700;color:var(--green);margin-top:10px}
+  .momentum b{color:var(--ink)}
+  .trust-badges{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-top:14px;
+    font-size:12.5px;color:var(--muted);font-weight:600}
+  .trust-badges span{display:flex;align-items:center;gap:5px}
+
+  /* ---------- methodology ---------- */
+  .method-grid{display:grid;gap:12px;margin-top:8px}
+  .method-step{display:flex;gap:14px;background:#fff;border:1px solid var(--line);
+    border-radius:12px;padding:16px;box-shadow:var(--shadow);align-items:flex-start}
+  .method-step .n{width:32px;height:32px;flex:none;border-radius:50%;background:var(--blue);
+    color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:15px}
+  .method-step .mt{font-weight:800;font-size:15.5px;margin-bottom:3px}
+  .method-step .md{font-size:14px;color:var(--muted);margin:0;line-height:1.5}
+
+  /* ---------- comparison table ---------- */
+  .cmp{background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    box-shadow:var(--shadow);overflow:hidden;margin-top:8px}
+  .cmp table{width:100%;border-collapse:collapse;table-layout:fixed}
+  .cmp col.lbl{width:34%}
+  .cmp col.prod{width:22%}
+  .cmp th,.cmp td{padding:13px 8px;text-align:center;vertical-align:middle;font-size:13.5px}
+  .cmp thead th{font-size:13px;font-weight:800;white-space:nowrap;border-bottom:2px solid var(--line);
+    background:var(--bg)}
+  .cmp thead th .trophy{display:block;font-size:15px;margin-bottom:1px}
+  .cmp thead th.win-col{background:var(--gold-soft);color:var(--gold);border-bottom-color:var(--gold-line)}
+  .cmp tbody td:first-child,.cmp thead th:first-child{text-align:left;font-weight:700;color:var(--ink);
+    font-size:13.5px;padding-left:16px}
+  .cmp tbody tr:nth-child(even) td{background:var(--blue-tint)}
+  .cmp td.win-col{background:#fcf8ee;font-weight:800;color:var(--ink)}
+  .cmp tbody tr:nth-child(even) td.win-col{background:#faf3e1}
+  .cmp tbody td{border-bottom:1px solid var(--line)}
+  .cmp tbody tr:last-child td{border-bottom:none}
+  .cmp .yes{color:var(--green);font-weight:800}
+  .cmp .no{color:#b6c0cb;font-weight:700}
+
+  /* ---------- villain ---------- */
+  .villain{background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:8px 20px;box-shadow:var(--shadow);margin-top:8px}
+  ul.fails{list-style:none}
+  ul.fails li{display:flex;gap:13px;padding:15px 0;border-bottom:1px solid var(--line);
+    font-size:15.5px;line-height:1.55;align-items:flex-start}
+  ul.fails li:last-child{border-bottom:none}
+  ul.fails li .xc{flex:none;width:24px;height:24px;border-radius:7px;background:var(--red-soft);
+    color:var(--red);font-weight:800;display:flex;align-items:center;justify-content:center;
+    font-size:13px;margin-top:1px}
+
+  /* ---------- ingredients ---------- */
+  .ingr{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:18px 0}
+  .ing{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;box-shadow:var(--shadow)}
+  .ing .ic{font-size:26px;margin-bottom:8px}
+  .ing .it{font-weight:800;font-size:15px;margin-bottom:4px}
+  .ing .id{font-size:13.5px;color:var(--muted);margin:0;line-height:1.5}
+  .benefit-row{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin:20px 0}
+  .ben{text-align:center;background:var(--blue-soft);border-radius:12px;padding:18px 12px}
+  .ben .bc{font-size:24px}
+  .ben .bt{font-size:13.5px;font-weight:700;margin-top:8px;line-height:1.4;color:var(--blue-dark)}
+
+  /* ---------- winner spotlight ---------- */
+  .spot{background:var(--gold-soft);border:2px solid var(--gold);border-radius:var(--radius);
+    padding:20px 18px;box-shadow:var(--shadow-lg)}
+  .spot-top{display:flex;gap:16px;align-items:center}
+  .spot-top .si{width:80px;height:80px;border-radius:12px;background:#fff;border:1px solid var(--gold-line);
+    flex:none;display:flex;align-items:center;justify-content:center;font-size:32px;overflow:hidden}
+  .spot-top .sname{font-weight:800;font-size:19px;line-height:1.2}
+  .spot-top .ssub{font-size:13px;color:var(--gold);font-weight:700;margin-top:3px}
+  .spot-score{margin-left:auto;text-align:center}
+  .spot-score .v{font-size:28px;font-weight:800;color:var(--gold);line-height:1}
+  .spot-score .m{font-size:11px;color:var(--muted);font-weight:700;margin-top:2px}
+
+  /* ---------- testimonials ---------- */
+  .tcard{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px;
+    box-shadow:var(--shadow);margin:14px 0}
+  .tcard .ts{color:var(--gold);letter-spacing:1.5px;font-size:15px;margin-bottom:9px}
+  .tcard p{font-size:15px;font-style:italic;color:#28323d;margin-bottom:14px;line-height:1.6}
+  .tcard .who{display:flex;align-items:center;gap:11px}
+  .tcard .who .av{width:38px;height:38px;border-radius:50%;flex:none;background:var(--blue-soft);
+    color:var(--blue);font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px}
+  .tcard .who .wn{font-weight:800;font-size:14px;line-height:1.1}
+  .tcard .who .wl{font-size:12px;color:var(--muted)}
+  .verified{font-size:11px;color:var(--green);font-weight:700;margin-left:auto;
+    background:var(--green-soft);padding:5px 10px;border-radius:20px}
+
+  /* ---------- FAQ ---------- */
+  .faq{background:#fff;border:1px solid var(--line);border-radius:12px;margin:12px 0;
+    box-shadow:var(--shadow);overflow:hidden}
+  .faq summary{padding:16px 18px;font-weight:700;font-size:15.5px;cursor:pointer;
+    list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";font-size:22px;color:var(--blue);font-weight:400;flex:none;line-height:1}
+  .faq[open] summary{border-bottom:1px solid var(--line)}
+  .faq[open] summary::after{content:"–"}
+  .faq .fa{padding:15px 18px;font-size:15px;color:#28323d;line-height:1.6}
+
+  /* ---------- editor note ---------- */
+  .editor{background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px 20px;box-shadow:var(--shadow)}
+  .editor p{margin-bottom:14px}
+  .sig{display:flex;align-items:center;gap:12px;margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
+  .sig .av{width:44px;height:44px;border-radius:50%;flex:none;background:var(--gold);
+    color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:16px}
+  .sig .sn{font-weight:800;font-size:15px}
+  .sig .sr{font-size:13px;color:var(--muted)}
+
+  /* ---------- author bio ---------- */
+  .bio{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px 20px;
+    box-shadow:var(--shadow);display:flex;gap:16px;align-items:flex-start}
+  .bio .av{width:60px;height:60px;border-radius:50%;flex:none;background:var(--blue);
+    color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:22px}
+  .bio .bn{font-weight:800;font-size:16px}
+  .bio .br{font-size:13px;color:var(--blue);font-weight:700;margin-bottom:8px}
+  .bio p{font-size:14px;color:var(--muted);margin:0;line-height:1.6}
+
+  /* ---------- disclaimers / footer ---------- */
+  .disc{font-size:12.5px;color:var(--muted);line-height:1.6;margin-bottom:12px}
+  .disc b{color:var(--ink)}
+  footer{background:#0e1c29;color:#aebdcb;padding:28px 0 96px;margin-top:0}
+  footer a{color:#cdd9e5;text-decoration:none;font-size:14px}
+  footer .flinks{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;margin-bottom:14px}
+  footer .cr{text-align:center;font-size:12px;color:#7c8c9b}
+
+  /* ---------- sticky bottom bar ---------- */
+  .sticky{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);
+    box-shadow:0 -6px 20px rgba(16,42,67,.12);padding:11px 16px;z-index:50;
+    display:flex;align-items:center;gap:12px;transform:translateY(120%);transition:transform .3s}
+  .sticky.show{transform:translateY(0)}
+  .sticky-inner{max-width:var(--maxw);margin:0 auto;width:100%;display:flex;align-items:center;gap:12px}
+  .sticky .si{width:44px;height:44px;border-radius:10px;background:var(--bg);border:1px solid var(--line);
+    flex:none;display:flex;align-items:center;justify-content:center;font-size:22px;overflow:hidden}
+  .sticky .stext{flex:1;min-width:0}
+  .sticky .stext .stt{font-weight:800;font-size:14px;line-height:1.15}
+  .sticky .stext .sts{font-size:12px;color:var(--muted)}
+  .sticky .sbtn{background:var(--blue);color:#fff;font-weight:800;text-decoration:none;
+    padding:12px 18px;border-radius:11px;white-space:nowrap;font-size:14px;flex:none}
+
+  @media(max-width:600px){
+    .wrap{padding:0 16px}
+    section{padding:32px 0}
+    h1{font-size:25px}
+    h2{font-size:21px}
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .rank-top{flex-direction:column}
+    .rank-img{width:100%;height:140px}
+    .benefit-row{grid-template-columns:1fr}
+    .ingr{grid-template-columns:1fr}
+    .cmp th,.cmp td{padding:11px 5px;font-size:12.5px}
+    .cmp tbody td:first-child,.cmp thead th:first-child{padding-left:11px;font-size:12.5px}
+    .cmp thead th{font-size:12px}
+    body{font-size:16px}
+  }
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="topbar">Unabhängiger Verbraucher-Vergleich · Zuletzt aktualisiert: Juni 2026</div>
+
+<header class="site">
+  <div class="wrap">
+    <div class="brand">
+      <div class="logo">VF</div>
+      <div>
+        <div class="bname">Verbraucher Fokus Test</div>
+        <div class="bsub">Vergleich &amp; Bewertung</div>
+      </div>
+    </div>
+    <span class="checked-badge">✓ Redaktionell geprüft</span>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="wrap" style="padding-top:30px">
+  <span class="eyebrow">Vergleich 2026 · Abnehmpflaster</span>
+  <h1>Ich habe die meistgekauften Abnehmpflaster 2026 getestet — <em>eines hat sich klar abgehoben</em></h1>
+  <p class="lead">In den letzten sechs Monaten habe ich über 200 in Deutschland verkaufte Abnehmpflaster geprüft. Nur eine Handvoll hat wirklich geliefert — und eines hat alle anderen hinter sich gelassen.</p>
+
+  <div class="byline">
+    <div class="avatar">LH</div>
+    <div class="meta">
+      <div class="nm">Lena Hoffmann</div>
+      <div class="rl">Leitende Redakteurin · Verbraucher Fokus Test</div>
+      <div class="stars">★★★★★</div>
+    </div>
+    <span class="tag">Selbst getestet</span>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="big">200+</div><div class="lbl">Pflaster getestet</div></div>
+    <div class="stat"><div class="big">6 Mon.</div><div class="lbl">Unabhängige Tests</div></div>
+    <div class="stat"><div class="big">🇩🇪</div><div class="lbl">In Deutschland verkauft</div></div>
+    <div class="stat"><div class="big">3</div><div class="lbl">Finalisten</div></div>
+  </div>
+
+  <p>Abnehmpflaster sind gerade überall — aus einem einzigen Grund. Sie sind die einfachste Methode seit Jahren. Keine Tabletten. Keine Shakes. Keine Regeln.</p>
+  <div class="chips">
+    <span class="chip">Kein Kalorienzählen</span>
+    <span class="chip">Kein Hungern</span>
+    <span class="chip">Kein Diätstress</span>
+  </div>
+  <p>Doch eine Frage stellt sich immer wieder: <b>Funktioniert das wirklich? Oder ist es nur cleveres Marketing?</b></p>
+  <p>Die ehrliche Antwort hängt komplett vom Pflaster ab, das Sie kaufen. Die Unterschiede zwischen den Marken sind <b>enorm</b> — gleicher Preis, völlig andere Formel.</p>
+
+  <div class="panel">
+    <div class="ph">🔎 Bewertet nach den Kriterien, die zählen</div>
+    <ul class="checks">
+      <li>Qualität &amp; Dosierung der Inhaltsstoffe</li>
+      <li>Unterstützung des Fettstoffwechsels</li>
+      <li>Hautverträglichkeit &amp; Tragekomfort</li>
+      <li>Preis-Leistungs-Verhältnis</li>
+      <li>Echte Anwendererfahrungen</li>
+    </ul>
+  </div>
+  <div class="callout">👉 Ein Produkt setzte sich klar an die Spitze. Hier ist die Aufschlüsselung.</div>
+</section>
+
+<!-- ===== METHODOLOGY ===== -->
+<section class="alt">
+  <div class="wrap">
+    <span class="eyebrow">Transparenz</span>
+    <h2>So haben wir getestet — Schritt für Schritt</h2>
+    <p class="sub-lead">Damit unser Ranking nachvollziehbar bleibt, hier unser genauer Ablauf — bewertet anhand eigener Tragetests sowie öffentlich verfügbarer Hersteller- und Laborangaben.</p>
+    <div class="method-grid">
+      <div class="method-step"><div class="n">1</div><div><div class="mt">Beschaffung</div><p class="md">Über 200 Abnehmpflaster aus deutschen Apotheken, Drogerien und Online-Marktplätzen bestellt — quer durch alle Preisklassen.</p></div></div>
+      <div class="method-step"><div class="n">2</div><div><div class="mt">Tragetest über 6 Monate</div><p class="md">Jeder Favorit wurde mindestens 14 Tage am Stück getragen — im Alltag, beim Sport und über Nacht.</p></div></div>
+      <div class="method-step"><div class="n">3</div><div><div class="mt">Wirkstoff-Check</div><p class="md">Abgleich der angegebenen Berberin-Dosierung und Begleitstoffe mit Herstellerangaben und öffentlich verfügbaren Analysen.</p></div></div>
+      <div class="method-step"><div class="n">4</div><div><div class="mt">Haut &amp; Haftung</div><p class="md">Bewertet wurden Hautverträglichkeit, Tragekomfort und ob das Pflaster über 24 Stunden zuverlässig hält.</p></div></div>
+      <div class="method-step"><div class="n">5</div><div><div class="mt">Preis pro Tag</div><p class="md">Abschließend der ehrlichste Maßstab: Was kostet die tägliche Anwendung wirklich — inklusive aktueller Rabatte?</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TOP 3 RANKING ===== -->
+<section class="wrap">
+  <h2>Die Top 3 im Vergleich</h2>
+  <p class="sub-lead">Stand Juni 2026 · sortiert nach Gesamtbewertung</p>
+
+  <!-- WINNER -->
+  <div class="rank win">
+    <div class="rank-flag">🏆 Platz 1 · Redaktions-Empfehlung</div>
+    <div class="rank-body">
+      <div class="rank-top">
+        <div class="rank-img">🩹</div>
+        <div style="flex:1">
+          <div class="rank-name">Altuva Abnehmpflaster</div>
+          <div class="score-row"><span class="score">9,9</span><span class="score-max">/10</span><span class="score-tag">Exzellent</span></div>
+          <div class="stars">★★★★★</div>
+          <div class="per-day">⚡ Weniger als 1 € pro Tag</div>
+          <div class="price-row">
+            <span class="price-now">14,99 €</span>
+            <span class="price-old">59,96 €</span>
+            <span class="price-off">−70 %</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="subs">
+        <div class="sub"><div class="sl"><span>Wirkstoffqualität</span><span class="sv">9,9</span></div><div class="bar"><i style="width:99%"></i></div></div>
+        <div class="sub"><div class="sl"><span>Preis-Leistung</span><span class="sv">9,8</span></div><div class="bar"><i style="width:98%"></i></div></div>
+        <div class="sub"><div class="sl"><span>Verträglichkeit</span><span class="sv">9,7</span></div><div class="bar"><i style="width:97%"></i></div></div>
+        <div class="sub"><div class="sl"><span>Anwendung</span><span class="sv">10</span></div><div class="bar"><i style="width:100%"></i></div></div>
+      </div>
+
+      <ul class="checks">
+        <li><b>Premium-Wirkstoffkomplex —</b>&nbsp;Berberin-Extrakt, Fucoxanthin, Granatapfelöl, Grüntee-Extrakt &amp; Vitamine, gezielt für den Fettstoffwechsel kombiniert.</li>
+        <li><b>Unsichtbar &amp; geruchlos —</b>&nbsp;diskret unter der Kleidung tragbar. Niemand sieht oder riecht etwas.</li>
+        <li><b>Unterstützt Stoffwechsel &amp; Kalorienverwertung —</b>&nbsp;kann den Stoffwechsel anregen, auch im Ruhezustand.</li>
+        <li><b>Kinderleichte Anwendung —</b>&nbsp;aufkleben und wirken lassen. Keine Tabletten, kein Diätstress.</li>
+        <li><b>30 Tage Geld-zurück-Garantie —</b>&nbsp;risikofrei testen.</li>
+        <li><b>Aktuell bis zu 70 % reduziert —</b>&nbsp;begrenzte Verfügbarkeit.</li>
+      </ul>
+
+      <div class="note-soft">
+        <div class="mini-head">Zu beachten</div>
+        <ul class="checks cons"><li>Stark nachgefragt — Verfügbarkeit aktuell begrenzt.</li></ul>
+      </div>
+
+      <a class="cta" href="https://trk.connectbenefit.online/click">Zum offiziellen Shop →</a>
+      <div class="momentum">🔥 Diese Woche bereits <b>1.247×</b> bestellt</div>
+      <div class="trust-badges">
+        <span>✓ 30 Tage Garantie</span><span>🔒 Sichere Bestellung</span><span>🚚 Kostenloser Versand</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- #2 -->
+  <div class="rank">
+    <div class="rank-flag">Platz 2</div>
+    <div class="rank-body">
+      <div class="rank-top">
+        <div class="rank-img">🩹</div>
+        <div style="flex:1">
+          <div class="rank-name">Pflaster B</div>
+          <div class="score-row"><span class="score">9,0</span><span class="score-max">/10</span><span class="score-tag" style="color:var(--blue)">Gut</span></div>
+          <div class="stars">★★★★☆</div>
+          <div class="price-row"><span class="price-now">39,99 €</span></div>
+        </div>
+      </div>
+      <ul class="checks">
+        <li><b>220 mg Berberin pro Pflaster —</b>&nbsp;eine respektable, sauber abgegebene Dosis.</li>
+        <li><b>Kombiniert mit Grüntee-Extrakt —</b>&nbsp;für zusätzliche Stoffwechselunterstützung.</li>
+        <li><b>24-Stunden-Haftung —</b>&nbsp;hält zuverlässig auch beim Sport.</li>
+        <li><b>Hypoallergener Klebstoff —</b>&nbsp;schonend zu sensibler Haut.</li>
+        <li><b>GMP-zertifizierte Produktion</b>&nbsp;in Deutschland.</li>
+      </ul>
+      <div class="mini-head">Nachteile gegenüber dem Sieger</div>
+      <ul class="checks cons">
+        <li>Fucoxanthin und Granatapfelöl aus Altuva fehlen</li>
+        <li>Deutlich höherer Stückpreis pro Pflaster</li>
+        <li>Nur 20 Pflaster pro Box (Altuva bietet 30)</li>
+        <li>Aktuell kein Einführungsrabatt verfügbar</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- #3 -->
+  <div class="rank">
+    <div class="rank-flag">Platz 3</div>
+    <div class="rank-body">
+      <div class="rank-top">
+        <div class="rank-img">🩹</div>
+        <div style="flex:1">
+          <div class="rank-name">Pflaster C</div>
+          <div class="score-row"><span class="score">8,5</span><span class="score-max">/10</span><span class="score-tag" style="color:var(--blue)">Gut</span></div>
+          <div class="stars">★★★★☆</div>
+          <div class="price-row"><span class="price-now">29,99 €</span></div>
+        </div>
+      </div>
+      <ul class="checks">
+        <li><b>Berberin plus Chrom —</b>&nbsp;Chrom ergänzt die Heißhunger-Kontrolle.</li>
+        <li><b>Flaches, komfortables Design —</b>&nbsp;minimal und diskret unter der Kleidung.</li>
+        <li><b>30 Tage Zufriedenheitsgarantie —</b>&nbsp;vom Hersteller.</li>
+        <li><b>Vegane Formulierung.</b></li>
+      </ul>
+      <div class="mini-head">Nachteile gegenüber dem Sieger</div>
+      <ul class="checks cons">
+        <li>Niedrigste Berberin-Dosis der drei (180 mg pro Pflaster)</li>
+        <li>Kürzere Tragedauer — etwa 12 Stunden pro Pflaster</li>
+        <li>Wechsel alle 2–3 Tage erforderlich</li>
+        <li>Höherer Stückpreis als der Sieger</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HEAD-TO-HEAD TABLE ===== -->
+<section class="alt">
+  <div class="wrap">
+    <span class="eyebrow">Direkter Vergleich</span>
+    <h2>Altuva gegen die Konkurrenz</h2>
+    <p class="sub-lead">Wo sich der Sieger Zeile für Zeile von den Platzierten unterscheidet.</p>
+    <div class="cmp">
+      <table>
+        <colgroup><col class="lbl"><col class="prod"><col class="prod"><col class="prod"></colgroup>
+        <thead>
+          <tr>
+            <th></th>
+            <th class="win-col"><span class="trophy">🏆</span>Altuva</th>
+            <th>Pflaster B</th>
+            <th>Pflaster C</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Wirkstoffe</td><td class="win-col">4</td><td>2</td><td>2</td></tr>
+          <tr><td>Fucoxanthin &amp; Granatapfelöl</td><td class="win-col"><span class="yes">✓</span></td><td><span class="no">—</span></td><td><span class="no">—</span></td></tr>
+          <tr><td>Pflaster pro Box</td><td class="win-col">30</td><td>20</td><td>20</td></tr>
+          <tr><td>Tragedauer</td><td class="win-col">24 Std.</td><td>24 Std.</td><td>~12 Std.</td></tr>
+          <tr><td>Preis pro Tag</td><td class="win-col">&lt; 1,00 €</td><td>2,00 €</td><td>1,50 €</td></tr>
+          <tr><td>Aktueller Rabatt</td><td class="win-col"><span class="yes">−70 %</span></td><td><span class="no">—</span></td><td><span class="no">—</span></td></tr>
+          <tr><td>30 Tage Garantie</td><td class="win-col"><span class="yes">✓</span></td><td><span class="no">—</span></td><td><span class="yes" style="color:var(--green)">✓</span></td></tr>
+          <tr><td>Gesamtbewertung</td><td class="win-col">9,9</td><td>9,0</td><td>8,5</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <a class="cta sm" href="https://trk.connectbenefit.online/click">Sieger ansehen →</a>
+    <p class="disc" style="margin-top:12px;text-align:center">Basierend auf öffentlich verfügbaren Angaben (Stand Juni 2026). Produktdetails können sich ändern.</p>
+  </div>
+</section>
+
+<!-- ===== VILLAIN ===== -->
+<section class="wrap">
+  <span class="eyebrow">Was die meisten nicht wissen</span>
+  <h2>Warum die meisten Abnehmpflaster versagen</h2>
+  <p class="sub-lead">Deutschland hat dutzende Abnehmpflaster im Handel — in unseren Tests fiel die große Mehrheit aus denselben vier Gründen durch.</p>
+  <div class="villain">
+    <ul class="fails">
+      <li><span class="xc">✕</span><div><b>Unterdosiertes Berberin.</b> Auf dem Etikett steht ein Wirkstoff — drin ist oft nur eine Spur davon, kaum genug, um überhaupt etwas zu bewirken.</div></li>
+      <li><span class="xc">✕</span><div><b>Etikett ≠ Inhalt.</b> Mehrfach wichen die tatsächlichen Angaben von dem ab, was vorne versprochen wurde.</div></li>
+      <li><span class="xc">✕</span><div><b>Billiger Klebstoff.</b> Das Pflaster löst sich nach wenigen Stunden — die gleichmäßige Abgabe über die Haut ist dahin.</div></li>
+      <li><span class="xc">✕</span><div><b>Nur ein einziger Wirkstoff.</b> Statt einer durchdachten Kombination setzen viele auf eine einzelne Zutat — und hoffen aufs Marketing.</div></li>
+    </ul>
+  </div>
+  <p style="margin-top:18px">Von allen getesteten Pflastern hielten <b>nur drei</b>, was sie versprachen. Genau diese sehen Sie oben — und an der Spitze steht das einzige, das in <b>jeder</b> Kategorie überzeugte.</p>
+</section>
+
+<!-- ===== EDITOR NOTE ===== -->
+<section class="alt">
+  <div class="wrap">
+    <span class="eyebrow">📝 Anmerkung der Redaktion</span>
+    <h2>Ein Wort von mir — <em>warum nur drei?</em></h2>
+    <div class="editor">
+      <p>Eine berechtigte Frage. Was mich am meisten überrascht hat: Die große Mehrheit enthielt nicht die Inhaltsstoffe, die auf dem Etikett versprochen wurden — schockierend niedrige Berberin-Dosen, fehlende Komponenten, Formeln mit kaum messbaren Wirkstoffen.</p>
+      <p>Und wenn Sie mich persönlich fragen, welches Pflaster ich mir morgen früh auf die Haut klebe? <b>Altuva.</b> Ohne zu zögern. Es ist die sauberste Formel im Vergleich, die durchdachteste Wirkstoffkombination und das einzige Produkt, das aktuell zu einem für die meisten Leser erschwinglichen Preis erhältlich ist.</p>
+      <div class="sig">
+        <div class="av">LH</div>
+        <div><div class="sn">Lena Hoffmann</div><div class="sr">Leitende Redakteurin · Verbraucher Fokus Test</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WINNER DEEP DIVE ===== -->
+<section class="wrap">
+  <span class="eyebrow">🔥 Unsere klare Empfehlung</span>
+  <h2>Warum das Altuva Patch Platz 1 einnimmt</h2>
+
+  <div class="spot">
+    <div class="spot-top">
+      <div class="si">🩹</div>
+      <div>
+        <div class="sname">Altuva Abnehmpflaster</div>
+        <div class="ssub">Platz 1 · Redaktions-Empfehlung</div>
+      </div>
+      <div class="spot-score"><div class="v">9,9</div><div class="m">/10</div></div>
+    </div>
+  </div>
+
+  <p style="margin-top:18px">Im Vergleich der gefragtesten Abnehmpflaster setzte sich das <b>Altuva Patch</b> in jeder entscheidenden Kategorie durch. Das moderne transdermale System gibt ausgewählte Wirkstoffe kontinuierlich über die Haut ab — ohne Kapseln, ohne Pulver, ohne komplizierte Routine.</p>
+
+  <h3 style="margin-top:20px">Im Zentrum ein Wirkstoff, über den gerade alle sprechen: Berberin.</h3>
+  <p>Berberin ist ein pflanzlicher Inhaltsstoff, der seit Jahren im Zusammenhang mit Stoffwechselprozessen untersucht wird. Kombiniert mit drei weiteren ausgewählten Wirkstoffen entsteht eine durchdachte Formel:</p>
+
+  <div class="ingr">
+    <div class="ing"><div class="ic">🌿</div><div class="it">Berberin-Extrakt</div><p class="id">Pflanzlich, vielfach im Zusammenhang mit dem Stoffwechsel untersucht.</p></div>
+    <div class="ing"><div class="ic">🪸</div><div class="it">Fucoxanthin</div><p class="id">Natürlicher Algen-Wirkstoff, kombiniert für den Fettstoffwechsel.</p></div>
+    <div class="ing"><div class="ic">🍵</div><div class="it">Grüntee-Extrakt</div><p class="id">Traditionell bekannt zur Unterstützung des Stoffwechsels.</p></div>
+    <div class="ing"><div class="ic">🍎</div><div class="it">Granatapfelöl</div><p class="id">Pflanzlicher Begleiter für das allgemeine Wohlbefinden.</p></div>
+  </div>
+
+  <p>Statt Kalorien als Bauchfett einzulagern, geht es darum, sie effizienter zu nutzen. Viele Anwender berichten zusätzlich von <b>weniger Heißhunger und mehr Energie über den Tag</b>.</p>
+
+  <div class="benefit-row">
+    <div class="ben"><div class="bc">🌿</div><div class="bt">Heißhunger besser kontrollieren</div></div>
+    <div class="ben"><div class="bc">🔥</div><div class="bt">Gezielte Unterstützung im Bauchbereich</div></div>
+    <div class="ben"><div class="bc">⚡</div><div class="bt">Diskret &amp; einfach — den ganzen Tag</div></div>
+  </div>
+
+  <a class="cta" href="https://trk.connectbenefit.online/click">Zum offiziellen Shop →</a>
+  <div class="momentum">🔥 Diese Woche bereits <b>1.247×</b> bestellt · 14,99 € statt 59,96 €</div>
+  <div class="trust-badges">
+    <span>✓ 30 Tage Geld-zurück</span><span>🔒 Sichere Bestellung</span><span>🚚 Schneller Versand</span>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="alt">
+  <div class="wrap">
+    <span class="eyebrow">Anwender berichten</span>
+    <h2>Was Leser uns geschrieben haben</h2>
+    <p class="sub-lead">Einzelne Erfahrungsberichte. Individuelle Ergebnisse können variieren und sind weder typisch noch garantiert.</p>
+
+    <div class="tcard">
+      <div class="ts">★★★★★</div>
+      <p>„Ich trage es seit gut drei Wochen unter der Bluse — man sieht und spürt nichts. Was mir auffällt: Der Griff zur Schokolade am Nachmittag ist deutlich seltener geworden. Für mich die unkomplizierteste Sache, die ich bisher probiert habe.“</p>
+      <div class="who"><div class="av">SK</div><div><div class="wn">Sabine K.</div><div class="wl">München</div></div><span class="verified">✓ Verifiziert</span></div>
+    </div>
+
+    <div class="tcard">
+      <div class="ts">★★★★★</div>
+      <p>„Skeptisch war ich am Anfang schon. Aber das Pflaster hält wirklich den ganzen Tag, auch beim Sport. Angenehmes Hautgefühl, keine Rötung. Ich fühle mich über den Tag einfach ausgeglichener.“</p>
+      <div class="who"><div class="av">TR</div><div><div class="wn">Thomas R.</div><div class="wl">Hamburg</div></div><span class="verified">✓ Verifiziert</span></div>
+    </div>
+
+    <div class="tcard">
+      <div class="ts">★★★★☆</div>
+      <p>„Die Anwendung ist wirklich kinderleicht — aufkleben und fertig. Kein Pulver, kein Anrühren. Ich mag, dass es so diskret ist und im Alltag nicht auffällt. Bin gespannt, wie es nach ein paar Monaten aussieht.“</p>
+      <div class="who"><div class="av">AW</div><div><div class="wn">Andrea W.</div><div class="wl">Köln</div></div><span class="verified">✓ Verifiziert</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="wrap">
+  <span class="eyebrow">Häufige Fragen</span>
+  <h2>Was Leser am häufigsten fragen</h2>
+
+  <details class="faq" open><summary>Ist Altuva seriös?</summary><div class="fa">Altuva ist ein regulär erhältliches Nahrungsergänzungs-Pflaster, das über den offiziellen Shop vertrieben wird und mit einer 30-tägigen Geld-zurück-Garantie kommt. Um Original-Ware zu erhalten, sollten Sie ausschließlich über den offiziellen Anbieter bestellen.</div></details>
+
+  <details class="faq"><summary>Wie schnell wirkt das Pflaster?</summary><div class="fa">Das ist individuell sehr verschieden und hängt von vielen Faktoren wie Ernährung, Bewegung und Ausgangslage ab. Das transdermale System gibt die Wirkstoffe kontinuierlich über die Haut ab. Erfahrungsberichte sind weder typisch noch garantiert.</div></details>
+
+  <details class="faq"><summary>Für wen ist Altuva geeignet?</summary><div class="fa">Für Erwachsene, die eine unkomplizierte, diskrete Anwendung ohne Tabletten oder Shakes suchen. Konsultieren Sie vor der Anwendung einen Arzt oder medizinisches Fachpersonal, insbesondere bei Vorerkrankungen, Schwangerschaft oder Stillzeit.</div></details>
+
+  <details class="faq"><summary>Wo kann ich Altuva kaufen?</summary><div class="fa">Ausschließlich über den offiziellen Shop. Der direkte Vertriebsweg stellt sicher, dass Sie Original-Ware, den aktuellen Rabatt und die volle 30-Tage-Garantie erhalten.</div></details>
+
+  <details class="faq"><summary>Gibt es eine Garantie?</summary><div class="fa">Ja. Altuva kommt mit einer 30-tägigen Geld-zurück-Garantie. Sind Sie nicht zufrieden, wenden Sie sich an den Kundenservice des Anbieters für eine unkomplizierte Rückabwicklung.</div></details>
+</section>
+
+<!-- ===== AUTHOR BIO ===== -->
+<section class="wrap" style="padding-top:0">
+  <div class="bio">
+    <div class="av">LH</div>
+    <div>
+      <div class="bn">Lena Hoffmann</div>
+      <div class="br">Leitende Redakteurin · Verbraucher Fokus Test</div>
+      <p>Lena testet seit über acht Jahren Wellness- und Gesundheitsprodukte und legt dabei Wert auf reale Alltagstauglichkeit statt Marketing-Versprechen. Ihr Ziel ist es, den Kaufprozess zu vereinfachen, indem sie durch den Lärm schneidet und die Produkte findet, die im Alltag wirklich überzeugen.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="wrap" style="padding-top:8px">
+  <div class="rank win">
+    <div class="rank-flag">🏆 Verpassen Sie nicht dieses Angebot</div>
+    <div class="rank-body" style="text-align:center">
+      <div class="rank-name" style="font-size:22px">Altuva Abnehmpflaster</div>
+      <div class="score-row" style="justify-content:center"><span class="score">9,9</span><span class="score-max">/10</span></div>
+      <div class="stars" style="display:inline-block">★★★★★</div>
+      <div class="price-row" style="justify-content:center"><span class="price-now">14,99 €</span><span class="price-old">59,96 €</span><span class="price-off">−70 %</span></div>
+      <a class="cta" href="https://trk.connectbenefit.online/click">Zum Angebot →</a>
+      <div class="momentum">🔥 Diese Woche bereits <b>1.247×</b> bestellt</div>
+      <div class="trust-badges"><span>✓ 30 Tage Garantie</span><span>🔒 Sichere Bestellung</span><span>🚚 Kostenloser Versand</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DISCLAIMERS / FOOTER ===== -->
+<section class="wrap" style="padding-top:0">
+  <p class="disc"><b>Haftungsausschluss:</b> Diese Website dient nur zu Informationszwecken und stellt keine medizinische Beratung, Diagnose oder Behandlung dar. Konsultieren Sie immer einen Arzt oder medizinisches Fachpersonal, bevor Sie ein Nahrungsergänzungsmittel oder Pflaster verwenden. Individuelle Ergebnisse können variieren; Erfahrungsberichte oder Vorher-Nachher-Beispiele sind weder typisch noch garantiert.</p>
+  <p class="disc"><b>Offenlegung:</b> Diese Website kann Affiliate-Links enthalten; wir können ohne zusätzliche Kosten für Sie eine Provision erhalten. Wir sind eine unabhängige Vergleichswebsite und nicht der Hersteller der vorgestellten Produkte. Verwendete Personenfotos können Models zeigen; Autorennamen können Pseudonyme des Testteams sein.</p>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="flinks">
+      <a href="#">Über Uns</a><a href="#">Datenschutzrichtlinie</a><a href="#">Kontakt</a><a href="#">Impressum</a>
+    </div>
+    <div class="cr">© 2026 Verbraucher Fokus Test · Alle Rechte vorbehalten</div>
+  </div>
+</footer>
+
+<!-- ===== STICKY BOTTOM BAR ===== -->
+<div class="sticky" id="stickybar">
+  <div class="sticky-inner">
+    <div class="si">🩹</div>
+    <div class="stext">
+      <div class="stt">🏆 Altuva · Platz 1</div>
+      <div class="sts">Redaktions-Empfehlung · 9,9/10</div>
+    </div>
+    <a class="sbtn" href="https://trk.connectbenefit.online/click">Zum Angebot →</a>
+  </div>
+</div>
+
+<script>
+  var bar=document.getElementById('stickybar');
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>600){bar.classList.add('show')}else{bar.classList.remove('show')}
+  },{passive:true});
+</script>
+
+</body>
+</html>
