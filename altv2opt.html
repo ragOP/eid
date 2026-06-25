@@ -328,8 +328,6 @@
   .stiftung-box p strong{color:var(--ink)}
 
   /* FIX 5: COUNTDOWN / URGENCY */
-  .urgency-bar{background:linear-gradient(90deg,#d8412f,#c0392b);color:#fff;text-align:center;padding:12px 16px;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
-  .urgency-bar .timer{font-family:'Newsreader',serif;font-size:20px;font-weight:700;background:rgba(255,255,255,.2);padding:4px 12px;border-radius:6px;letter-spacing:1px;min-width:80px;display:inline-block;text-align:center}
   .stock-badge{display:inline-flex;align-items:center;gap:6px;background:#fff3cd;border:1px solid #ffc107;color:#856404;font-size:12.5px;font-weight:800;padding:5px 10px;border-radius:6px;margin-top:10px}
 
   /* FIX 7: FAQ */
@@ -434,8 +432,6 @@
     .stat:not(:last-child)::after{top:12%;bottom:12%}
     .stat b{font-size:22px}
     .stat span{font-size:8px;letter-spacing:0;line-height:1.25;margin-top:5px;padding:0 1px}
-    .urgency-bar{font-size:13px;gap:8px}
-    .urgency-bar .timer{font-size:17px}
     .testi-text{font-size:15.5px}
     .faq-q{font-size:15px;padding:14px 16px}
     .faq-a{padding:0 16px 14px;font-size:14.5px}
@@ -453,13 +449,6 @@
 </head>
 
 <body>
-
-<!-- FIX 5: URGENCY BAR — top of page -->
-<div class="urgency-bar">
-  <span>⚡ Aktionsangebot läuft ab in:</span>
-  <span class="timer" id="countdown">23:47:12</span>
-  <span>— Nur noch <strong>14 Pakete</strong> zum Rabattpreis verfügbar</span>
-</div>
 
 <!-- TOP TRUST BAR -->
 <div class="topbar"><span class="dot"></span>Unabhängiger Verbraucher-Vergleich · Zuletzt aktualisiert: Juni 2026</div>
@@ -939,30 +928,6 @@
     });
   }, { threshold: 0, rootMargin: '0px 0px -20px 0px' });
   obs.observe(winner);
-
-  // FIX 5: Countdown timer
-  function startCountdown() {
-    const el = document.getElementById('countdown');
-    if (!el) return;
-    // Set a session-based end time so it persists on refresh but resets on new session
-    let endTime = sessionStorage.getItem('ctdwn_end');
-    if (!endTime) {
-      // Random between 18 and 23 hours from now
-      const hours = 18 + Math.floor(Math.random() * 6);
-      endTime = Date.now() + hours * 3600000;
-      sessionStorage.setItem('ctdwn_end', endTime);
-    }
-    function tick() {
-      const diff = Math.max(0, endTime - Date.now());
-      const h = Math.floor(diff / 3600000);
-      const m = Math.floor((diff % 3600000) / 60000);
-      const s = Math.floor((diff % 60000) / 1000);
-      el.textContent = String(h).padStart(2,'0') + ':' + String(m).padStart(2,'0') + ':' + String(s).padStart(2,'0');
-      if (diff > 0) setTimeout(tick, 1000);
-    }
-    tick();
-  }
-  startCountdown();
 
   // FIX 7: FAQ accordion
   document.querySelectorAll('.faq-q').forEach(btn => {
