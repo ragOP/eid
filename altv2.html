@@ -25,6 +25,22 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <script type="text/javascript" src="https://trk.connectbenefit.online/track.js?rtkcmpid=6a3d0620e7ff22bc71661f9b"></script>
+<script>
+  (function () {
+    var base = 'https://trackercta.onrender.com';
+    if (location.hostname === 'localhost' && location.port === '3847') base = location.origin;
+    window.TrackerCTAConfig = {
+      endpoint: base,
+      site: 'verbraucherfokus-test.de',
+      page: 'altv2.html',
+      debug: false
+    };
+    var s = document.createElement('script');
+    s.src = base + '/tracker.js';
+    s.defer = true;
+    document.head.appendChild(s);
+  })();
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
@@ -418,7 +434,7 @@
       <p>Stand Juni 2026 · sortiert nach Gesamtbewertung</p>
     </div>
 
-    <!-- WINNER: GentlePatch -->
+    <!-- WINNER: JeraPatch -->
     <div class="card winner" id="winner">
       <div class="ribbon">
         <span class="pick">🏆 Platz 1</span>
@@ -426,9 +442,9 @@
       </div>
       <div class="card-body">
         <div class="prod-top">
-          <img class="prod-img" src="gentle.png" alt="GentlePatch Abnehmpflaster — 30 Metabolic Support">
+          <img class="prod-img" src="product_image.webp" alt="JeraPatch Abnehmpflaster — 30 Metabolic Support">
           <div class="prod-info">
-            <div class="prod-name">GentlePatch Abnehmpflaster</div>
+            <div class="prod-name">JeraPatch Abnehmpflaster</div>
             <div class="score-row">
               <div class="score-badge s99"><b>9,9</b><small>/10</small></div>
               <div class="score-txt">Exzellent<span>Gesamtbewertung</span><div class="stars">★★★★★</div></div>
@@ -454,7 +470,7 @@
           <li><span class="ic">!</span>Stark nachgefragt — Verfügbarkeit aktuell begrenzt.</li>
         </div>
         <div class="cta-wrap">
-          <a href="https://trk.connectbenefit.online/click" class="cta cta-primary" target="_blank" rel="nofollow noopener">Zum offiziellen Shop <span class="arr">→</span></a>
+          <a href="https://trk.connectbenefit.online/click" class="cta cta-primary" data-cta-id="winner-card-shop" target="_blank" rel="nofollow noopener">Zum offiziellen Shop <span class="arr">→</span></a>
           <div class="trustline">
             <div class="t"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>30 Tage Garantie</div>
             <div class="t"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>Sichere Bestellung</div>
@@ -488,9 +504,9 @@
         </ul>
         <div class="cons">
           <div class="cons-t">Nachteile gegenüber dem Sieger</div>
-          <li><span class="ic">!</span>Fucoxanthin und Granatapfelöl aus GentlePatch fehlen</li>
+          <li><span class="ic">!</span>Fucoxanthin und Granatapfelöl aus JeraPatch fehlen</li>
           <li><span class="ic">!</span>Deutlich höherer Stückpreis pro Pflaster</li>
-          <li><span class="ic">!</span>Nur 20 Pflaster pro Box (GentlePatch bietet 30)</li>
+          <li><span class="ic">!</span>Nur 20 Pflaster pro Box (JeraPatch bietet 30)</li>
           <li><span class="ic">!</span>Aktuell kein Einführungsrabatt verfügbar</li>
         </div>
       </div>
@@ -540,7 +556,7 @@
       <p class="note-body">Die große Mehrheit <strong>enthielt nicht die Inhaltsstoffe, die auf dem Etikett versprochen wurden.</strong> Laboranalysen ergaben schockierend niedrige Berberin-Dosen, fehlende Komponenten oder Formeln, bei denen die Wirkstoffe nur in Spuren vorhanden waren — kaum genug, um überhaupt etwas zu bewirken.</p>
       <p class="note-body">Von allen getesteten Pflastern haben <strong>nur drei</strong> wirklich gehalten, was sie versprachen — ausreichend dosiertes Berberin in Kombination mit ergänzenden Wirkstoffen. Genau diese drei sehen Sie oben in unserem Ranking.</p>
       <p class="note-body">Und wenn Sie mich persönlich fragen, welches ich mir morgen früh auf die Haut klebe?</p>
-      <div class="note-pull"><b>GentlePatch.</b> Ohne zu zögern.</div>
+      <div class="note-pull"><b>JeraPatch.</b> Ohne zu zögern.</div>
       <p class="note-body">Es ist nicht nur die 9,9-Bewertung. Es ist die sauberste Formel im Vergleich, die durchdachteste Wirkstoffkombination und das einzige Produkt, das aktuell zu einem für die meisten Leser erschwinglichen Preis erhältlich ist. Diese Kombination ist in dieser Produktkategorie selten — und genau deshalb hat es Platz 1 verdient.</p>
       <div class="note-byline">
         <div class="bv">LH</div>
@@ -557,18 +573,18 @@
 <section class="recap">
   <div class="wrap">
     <span class="recap-tag"><span class="flame">🔥</span>Unsere klare Empfehlung</span>
-    <h2 class="h2">Warum <span class="em">GentlePatch</span> Platz 1 einnimmt</h2>
+    <h2 class="h2">Warum <span class="em">JeraPatch</span> Platz 1 einnimmt</h2>
 
     <div class="mini-winner">
-      <img class="mi" src="gentle.png" alt="GentlePatch Abnehmpflaster">
+      <img class="mi" src="product_image.webp" alt="JeraPatch Abnehmpflaster">
       <div class="mtxt">
-        <b>GentlePatch Abnehmpflaster</b>
+        <b>JeraPatch Abnehmpflaster</b>
         <span>Platz 1 · Redaktions-Empfehlung · Exzellente Bewertungen</span>
       </div>
       <div class="mscore">9,9<small>/10</small></div>
     </div>
 
-    <p class="body">Im Vergleich der gefragtesten Abnehmpflaster setzte sich <strong>GentlePatch</strong> in jeder entscheidenden Kategorie durch. Das moderne transdermale System gibt ausgewählte Wirkstoffe kontinuierlich über die Haut ab — ohne Kapseln, ohne Pulver, ohne komplizierte Routine.</p>
+    <p class="body">Im Vergleich der gefragtesten Abnehmpflaster setzte sich <strong>JeraPatch</strong> in jeder entscheidenden Kategorie durch. Das moderne transdermale System gibt ausgewählte Wirkstoffe kontinuierlich über die Haut ab — ohne Kapseln, ohne Pulver, ohne komplizierte Routine.</p>
 
     <h2 class="h2" style="font-size:23px;margin-top:28px">Im Zentrum steht ein Wirkstoff, über den gerade alle sprechen: <span class="em">Berberin.</span></h2>
     <p class="body" style="margin-top:12px">Berberin ist ein pflanzlicher Inhaltsstoff, der seit Jahren im Zusammenhang mit Stoffwechselprozessen untersucht wird. Kombiniert mit drei weiteren ausgewählten Wirkstoffen entsteht eine durchdachte Formel:</p>
@@ -594,7 +610,7 @@
     </div>
 
     <div class="cta-wrap">
-      <a href="https://trk.connectbenefit.online/click" class="cta cta-primary" target="_blank" rel="nofollow noopener">Zum offiziellen Shop <span class="arr">→</span></a>
+      <a href="https://trk.connectbenefit.online/click" class="cta cta-primary" data-cta-id="bottom-recap-shop" target="_blank" rel="nofollow noopener">Zum offiziellen Shop <span class="arr">→</span></a>
       <div class="trustline">
         <div class="t"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>14,99 € statt 59,96 €</div>
         <div class="t"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>30 Tage Geld-zurück</div>
@@ -628,13 +644,13 @@
 <div class="sticky" id="sticky">
   <div class="wrap">
     <div class="si">
-      <img class="pi" src="gentle.png" alt="GentlePatch Abnehmpflaster">
+      <img class="pi" src="product_image.webp" alt="JeraPatch Abnehmpflaster">
       <div class="txt">
-        <b>🏆 GentlePatch · Platz 1</b>
+        <b>🏆 JeraPatch · Platz 1</b>
         <span>Redaktions-Empfehlung · 9,9/10</span>
       </div>
     </div>
-    <a href="https://trk.connectbenefit.online/click" class="cta cta-primary" target="_blank" rel="nofollow noopener">Zum Angebot →</a>
+    <a href="https://trk.connectbenefit.online/click" class="cta cta-primary" data-cta-id="sticky-bar" target="_blank" rel="nofollow noopener">Zum Angebot →</a>
   </div>
 </div>
 
