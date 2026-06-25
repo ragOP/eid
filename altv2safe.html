@@ -23,6 +23,22 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <script async src="https://www.clarity.ms/tag/wn0f3xht3i"></script>
 <script type="text/javascript" src="https://trk.connectbenefit.online/track.js?rtkcmpid=6a3d0620e7ff22bc71661f9b"></script>
+<script>
+  (function () {
+    var base = 'https://trackercta.onrender.com';
+    if (location.hostname === 'localhost' && location.port === '3847') base = location.origin;
+    window.TrackerCTAConfig = {
+      endpoint: base,
+      site: 'verbraucherfokus-test.de',
+      page: 'altv2safe.html',
+      debug: false
+    };
+    var s = document.createElement('script');
+    s.src = base + '/tracker.js';
+    s.defer = true;
+    document.head.appendChild(s);
+  })();
+</script>
 
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -596,7 +612,7 @@
           <li><span class="ic">!</span>Ergebnisse variieren je nach Person und Lebensstil.</li>
         </div>
         <div class="cta-wrap">
-          <a href="https://trk.connectbenefit.online/click" class="cta cta-primary" target="_blank" rel="nofollow noopener">Zum offiziellen Shop <span class="arr">→</span></a>
+          <a href="https://trk.connectbenefit.online/click" class="cta cta-primary" data-cta-id="winner-card-shop" target="_blank" rel="nofollow noopener">Zum offiziellen Shop <span class="arr">→</span></a>
           <div class="trustline">
             <div class="t"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"></path></svg>30 Tage Garantie</div>
             <div class="t"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"></path></svg>Sichere Bestellung</div>
@@ -755,7 +771,7 @@
 <div class="wrap">
   <div class="mid-cta">
     <p>Unser Testsieger: <strong>GentlePatch</strong> — 9,9/10 in unserem Vergleich. Aktuell mit 30 Tage Geld-zurück-Garantie erhältlich.</p>
-    <a href="https://trk.connectbenefit.online/click" class="cta cta-primary" target="_blank" rel="nofollow noopener">GentlePatch im offiziellen Shop ansehen <span class="arr">→</span></a>
+    <a href="https://trk.connectbenefit.online/click" class="cta cta-primary" data-cta-id="mid-cta-recommendation" target="_blank" rel="nofollow noopener">GentlePatch im offiziellen Shop ansehen <span class="arr">→</span></a>
   </div>
 </div>
 
@@ -800,7 +816,7 @@
     </div>
 
     <div class="cta-wrap">
-      <a href="https://trk.connectbenefit.online/click" class="cta cta-primary" target="_blank" rel="nofollow noopener">Zum offiziellen Shop <span class="arr">→</span></a>
+      <a href="https://trk.connectbenefit.online/click" class="cta cta-primary" data-cta-id="bottom-recap-shop" target="_blank" rel="nofollow noopener">Zum offiziellen Shop <span class="arr">→</span></a>
       <div class="trustline">
         <div class="t"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"></path></svg>14,99 € statt 59,96 €</div>
         <div class="t"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"></path></svg>30 Tage Geld-zurück</div>
@@ -923,7 +939,7 @@
         <span>Redaktions-Empfehlung · 9,9/10</span>
       </div>
     </div>
-    <a href="https://trk.connectbenefit.online/click" class="cta cta-primary" target="_blank" rel="nofollow noopener">Zum Angebot →</a>
+    <a href="https://trk.connectbenefit.online/click" class="cta cta-primary" data-cta-id="sticky-bar" target="_blank" rel="nofollow noopener">Zum Angebot →</a>
   </div>
 </div>
 
