@@ -48,7 +48,7 @@
     --ink:#0f1c2e; --ink-soft:#3a4a5e; --muted:#697789;
     --line:#e3e9f0; --bg:#fff; --bg-soft:#f5f8fc; --bg-tint:#eef4fb;
     --med-blue:#0b6cb8; --med-blue-d:#06548f; --med-blue-l:#e7f1fb;
-    --teal:#11998e; --gold:#f0a500; --green:#1f9d57; --green-d:#16a34a;
+    --teal:#11998e; --gold:#f0a500; --yellow-light:#fef3c7; --green:#1f9d57; --green-d:#16a34a;
     --green-soft:#e7f6ee; --red:#d8412f;
     --shadow-sm:0 1px 3px rgba(15,28,46,.06),0 1px 2px rgba(15,28,46,.04);
     --shadow:0 6px 24px rgba(15,28,46,.08),0 2px 6px rgba(15,28,46,.04);
@@ -94,8 +94,8 @@
 
   /* ---------- BODY PROSE ---------- */
   section.prose{padding:28px 0 12px}
-  .h2{font-family:'Newsreader',serif;font-weight:600;font-size:clamp(25px,5.5vw,32px);line-height:1.2;letter-spacing:-.4px;margin:8px 0;color:var(--ink)}
-  .h2 .em{color:var(--med-blue);font-style:italic}
+  .h2{font-family:'Newsreader',serif;font-weight:600;font-size:clamp(25px,5.5vw,32px);line-height:1.35;letter-spacing:-.4px;margin:8px 0;color:var(--ink);display:inline;padding:0 4px;background:linear-gradient(transparent 58%,var(--yellow-light) 58%);box-decoration-break:clone;-webkit-box-decoration-break:clone}
+  .h2 .em{color:inherit;font-style:normal;font-weight:600}
   p.body{margin:0 0 16px;color:var(--ink);font-size:17.5px}
   p.body strong{color:var(--ink);font-weight:700}
   .punch{font-family:'Newsreader',serif;font-style:italic;font-size:23px;line-height:1.35;color:var(--ink);margin:22px 0;padding-left:20px;border-left:3px solid var(--med-blue)}
@@ -114,8 +114,9 @@
 
   /* ---------- RANK CARDS ---------- */
   .ranks{padding:14px 0 8px}
+  .h2-wrap{margin:8px 0}
   .rank-head{text-align:center;margin-bottom:26px}
-  .rank-head .h2{margin-bottom:8px}
+  .rank-head .h2-wrap{margin-bottom:8px}
   .rank-head p{color:var(--muted);font-size:14.5px;font-weight:600}
 
   .card{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:22px;overflow:hidden}
@@ -432,7 +433,7 @@
 <section class="ranks">
   <div class="wrap">
     <div class="rank-head">
-      <h2 class="h2">Die <span class="em">Top 3</span> im Vergleich</h2>
+      <div class="h2-wrap"><h2 class="h2">Die <span class="em">Top 3</span> im Vergleich</h2></div>
       <p>Stand Juni 2026 · sortiert nach Gesamtbewertung</p>
     </div>
 
@@ -575,7 +576,7 @@
 <section class="recap">
   <div class="wrap">
     <span class="recap-tag"><span class="flame">🔥</span>Unsere klare Empfehlung</span>
-    <h2 class="h2">Warum das <span class="em">Altuva Patch</span> Platz 1 einnimmt</h2>
+    <div class="h2-wrap"><h2 class="h2">Warum das <span class="em">Altuva Patch</span> Platz 1 einnimmt</h2></div>
 
     <div class="mini-winner">
       <img class="mi" src="4.png" alt="Altuva Abnehmpflaster">
@@ -588,7 +589,7 @@
 
     <p class="body">Im Vergleich der gefragtesten Abnehmpflaster setzte sich das <strong>Altuva Patch</strong> in jeder entscheidenden Kategorie durch. Das moderne transdermale System gibt ausgewählte Wirkstoffe kontinuierlich über die Haut ab — ohne Kapseln, ohne Pulver, ohne komplizierte Routine.</p>
 
-    <h2 class="h2" style="font-size:23px;margin-top:28px">Im Zentrum steht ein Wirkstoff, über den gerade alle sprechen: <span class="em">Berberin.</span></h2>
+    <div class="h2-wrap" style="margin-top:28px"><h2 class="h2" style="font-size:23px">Im Zentrum steht ein Wirkstoff, über den gerade alle sprechen: <span class="em">Berberin.</span></h2></div>
     <p class="body" style="margin-top:12px">Berberin ist ein pflanzlicher Inhaltsstoff, der seit Jahren im Zusammenhang mit Stoffwechselprozessen untersucht wird. Kombiniert mit drei weiteren ausgewählten Wirkstoffen entsteht eine durchdachte Formel:</p>
 
     <div class="ingredient-grid">
