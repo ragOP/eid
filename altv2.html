@@ -81,8 +81,9 @@
   .kicker{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--med-blue);margin-bottom:18px}
   .kicker .ln{width:24px;height:2px;background:var(--med-blue);border-radius:2px}
   h1.hero-title{font-family:'Newsreader',serif;font-weight:600;font-size:clamp(30px,6.8vw,44px);line-height:1.1;letter-spacing:-.6px;color:var(--ink);margin-bottom:18px}
-  h1.hero-title em{font-style:italic;color:var(--med-blue);font-weight:600}
-  .hero-sub{font-size:18px;color:var(--ink-soft);max-width:600px;line-height:1.55}
+  h1.hero-title em,h1.hero-title .em{font-family:inherit;font-style:italic;color:var(--med-blue);font-weight:600}
+  h1.hero-title .hi{color:var(--med-blue);font-family:inherit;font-weight:600;font-style:normal}
+  .hero-sub{font-size:18px;color:var(--ink);max-width:600px;line-height:1.55}
   .hero-meta{display:flex;flex-wrap:wrap;gap:18px;margin-top:24px;padding-top:22px;border-top:1px solid var(--line)}
   .hero-meta .m{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--muted);font-weight:600}
   .author-row{display:flex;align-items:center;gap:12px;margin-top:22px}
@@ -95,7 +96,7 @@
   section.prose{padding:28px 0 12px}
   .h2{font-family:'Newsreader',serif;font-weight:600;font-size:clamp(25px,5.5vw,32px);line-height:1.2;letter-spacing:-.4px;margin:8px 0;color:var(--ink)}
   .h2 .em{color:var(--med-blue);font-style:italic}
-  p.body{margin:0 0 16px;color:var(--ink-soft);font-size:17.5px}
+  p.body{margin:0 0 16px;color:var(--ink);font-size:17.5px}
   p.body strong{color:var(--ink);font-weight:700}
   .punch{font-family:'Newsreader',serif;font-style:italic;font-size:23px;line-height:1.35;color:var(--ink);margin:22px 0;padding-left:20px;border-left:3px solid var(--med-blue)}
   .nostress{display:flex;flex-direction:column;gap:4px;margin:18px 0;font-family:'Newsreader',serif;font-size:20px;color:var(--ink);font-weight:500}
@@ -207,8 +208,8 @@
 
   /* FOOTER */
   footer{background:var(--bg-soft);padding:30px 0 90px;border-top:1px solid var(--line)}
-  .disc{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:14px}
-  .disc b{color:var(--ink-soft);font-weight:700}
+  .disc{font-size:12px;color:var(--ink);line-height:1.6;margin-bottom:14px}
+  .disc b{color:var(--ink);font-weight:700}
   .flinks{display:flex;gap:16px;flex-wrap:wrap;font-size:12.5px;margin:16px 0 10px}
   .flinks a{color:var(--med-blue);text-decoration:none;font-weight:600}
   .copyr{font-size:12px;color:var(--muted)}
@@ -334,7 +335,7 @@
   .note-tag{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:800;letter-spacing:1.2px;color:var(--med-blue-d);background:#fff;padding:6px 12px;border-radius:50px;margin-bottom:16px;border:1px solid #e8e0d0}
   .note-title{font-family:'Newsreader',serif;font-weight:600;font-size:clamp(22px,5vw,26px);line-height:1.2;color:var(--ink);margin-bottom:18px;letter-spacing:-.4px}
   .note-title em{font-style:italic;color:var(--med-blue)}
-  .note-body{font-family:'Newsreader',serif;font-size:18px;line-height:1.65;color:var(--ink-soft);margin-bottom:14px;font-weight:400}
+  .note-body{font-family:'Newsreader',serif;font-size:18px;line-height:1.65;color:var(--ink);margin-bottom:14px;font-weight:400}
   .note-body strong{color:var(--ink);font-weight:600}
   .note-pull{font-family:'Newsreader',serif;font-style:italic;font-size:22px;line-height:1.35;color:var(--ink);margin:18px 0;padding-left:18px;border-left:3px solid var(--gold);font-weight:500}
   .note-pull b{font-style:normal;color:var(--med-blue-d);font-weight:700}
@@ -373,7 +374,7 @@
 <section class="hero">
   <div class="wrap">
     <span class="kicker"><span class="ln"></span>Vergleich 2026 · Abnehmpflaster</span>
-    <h1 class="hero-title">Wir haben die meistgekauften Abnehmpflaster 2026 verglichen — <em>eines hat sich klar abgehoben</em></h1>
+    <h1 class="hero-title" id="dyn-headline">Wir haben die meistgekauften Abnehmpflaster 2026 verglichen — <span class="hi">eines hat sich klar abgehoben</span></h1>
     <p class="hero-sub">In den letzten sechs Monaten haben wir über 200 in Deutschland verkaufte Abnehmpflaster in unabhängigen Tests geprüft. Nur eine Handvoll hat wirklich geliefert — und eines hat sich klar von allen anderen abgehoben.</p>
     <div class="author-row">
       <div class="author-av">RD</div>
@@ -674,26 +675,26 @@
 
 <script>
   (function () {
-    var headlines = {
-      ag1: 'Abnehmpflaster im großen Erfahrungs-Check 2026 — <em>eines hat sich klar abgehoben</em>',
-      ag3: 'Berberin-Pflaster im Vergleich 2026 — <em>eines hat sich klar abgehoben</em>',
-      ag4: 'Das beste Abnehmpflaster 2026 — <em>Vergleichssieger &amp; wo kaufen</em>'
-      // ag2 and ag5 are left out on purpose -> they keep your default headline
-    };
-    function getParam(name) {
-      var m = new RegExp('[?&]' + name + '=([^&]+)').exec(window.location.search);
-      return m ? decodeURIComponent(m[1].replace(/\+/g, ' ')).toLowerCase() : '';
-    }
-    function run() {
-      var key = getParam('h');
-      if (!headlines[key]) return; // missing/unknown param -> default page, untouched
-      var el = document.getElementById('dyn-headline') || document.querySelector('h1');
-      if (el) el.innerHTML = headlines[key];
-    }
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', run);
-    } else { run(); }
+    var headlines = {
+      ag1: 'Abnehmpflaster im großen Erfahrungs-Check 2026 — <span class="hi">eines hat sich klar abgehoben</span>',
+      ag3: 'Berberin-Pflaster im Vergleich 2026 — <span class="hi">eines hat sich klar abgehoben</span>',
+      ag4: 'Das beste Abnehmpflaster 2026 — <span class="em">Vergleichssieger &amp; wo kaufen</span>'
+      // ag2 and ag5 are left out on purpose -> they keep your default headline
+    };
+    function getParam(name) {
+      var m = new RegExp('[?&]' + name + '=([^&]+)').exec(window.location.search);
+      return m ? decodeURIComponent(m[1].replace(/\+/g, ' ')).toLowerCase() : '';
+    }
+    function run() {
+      var key = getParam('h');
+      if (!headlines[key]) return; // missing/unknown param -> default page, untouched
+      var el = document.getElementById('dyn-headline') || document.querySelector('h1');
+      if (el) el.innerHTML = headlines[key];
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', run);
+    } else { run(); }
   })();
-  </script>
+</script>
 </body>
 </html>
