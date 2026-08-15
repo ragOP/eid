@@ -125,11 +125,23 @@
         .copy-content a.lp-cta {
             background: #da074a !important;
             color: #fff !important;
+            box-shadow: 0 0 14px rgba(218, 7, 74, 0.55), 0 8px 22px rgba(218, 7, 74, 0.35);
+            animation: lp-cta-glow 1.8s ease-in-out infinite;
         }
 
         .copy-content a.lp-cta:hover {
-            opacity: .93;
+            opacity: 1;
             color: #fff !important;
+            box-shadow: 0 0 22px rgba(218, 7, 74, 0.8), 0 10px 28px rgba(218, 7, 74, 0.45);
+        }
+
+        @keyframes lp-cta-glow {
+            0%, 100% {
+                box-shadow: 0 0 10px rgba(218, 7, 74, 0.45), 0 6px 16px rgba(218, 7, 74, 0.28);
+            }
+            50% {
+                box-shadow: 0 0 24px rgba(218, 7, 74, 0.8), 0 10px 28px rgba(218, 7, 74, 0.48);
+            }
         }
 
         .m-blog_detail-body a:has(img),
@@ -234,16 +246,32 @@
             overflow: hidden;
         }
 
+        .cta-btn-wrap {
+            padding: 10px 6px;
+        }
+
         .mk-description .new-action-button {
             margin: 0;
             background: #fff;
             color: #da074a !important;
+            box-shadow: 0 0 14px rgba(255, 255, 255, 0.55), 0 8px 22px rgba(255, 255, 255, 0.35);
+            animation: new-action-glow 1.8s ease-in-out infinite;
         }
 
         .mk-description .new-action-button:hover {
-            opacity: .93;
+            opacity: 1;
             background: #fff;
             color: #da074a !important;
+            box-shadow: 0 0 22px rgba(255, 255, 255, 0.8), 0 10px 28px rgba(255, 255, 255, 0.45);
+        }
+
+        @keyframes new-action-glow {
+            0%, 100% {
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.45), 0 6px 16px rgba(255, 255, 255, 0.28);
+            }
+            50% {
+                box-shadow: 0 0 24px rgba(255, 255, 255, 0.8), 0 10px 28px rgba(255, 255, 255, 0.48);
+            }
         }
 
         .mk-tile.tile.full {
@@ -759,8 +787,8 @@
 
             .copy-content a.lp-cta,
             .mk-description .new-action-button {
-                font-size: 1.05rem;
-                padding: 14px 16px;
+                font-size: 1.08rem;
+                padding: 22px 12px;
             }
 
             .new-cast .slick-slide {
@@ -855,8 +883,8 @@
 
             .copy-content a.lp-cta,
             .mk-description .new-action-button {
-                font-size: 1rem;
-                padding: 14px 12px;
+                font-size: 1.08rem;
+                padding: 22px 12px;
             }
 
             #countdown span {
