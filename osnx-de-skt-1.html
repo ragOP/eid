@@ -20,6 +20,7 @@
         html, body {
             overflow-x: hidden;
             max-width: 100%;
+            height: auto !important;
         }
 
         img {
@@ -225,7 +226,7 @@
 
         .mk-pic {
             float: none;
-            max-width: 12rem;
+            max-width: 22rem;
             width: 100%;
             text-align: center;
             margin: 0;
@@ -620,7 +621,7 @@
 
             .mk-pic {
                 margin: 0;
-                max-width: 10.5rem;
+                max-width: 18rem;
             }
 
             .right-rail {
@@ -777,7 +778,7 @@
             }
 
             .mk-pic {
-                max-width: 9.5rem;
+                max-width: 16rem;
                 margin: 0 auto;
             }
 
@@ -878,7 +879,7 @@
             }
 
             .mk-pic {
-                max-width: 8rem;
+                max-width: 14rem;
             }
 
             .copy-content a.lp-cta,
@@ -1269,6 +1270,43 @@
         .hero-gap {
             margin-top: 0.75rem !important;
         }
+
+        .sticky-cta {
+            position: fixed !important;
+            left: 12px;
+            right: 12px;
+            bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+            z-index: 2147483647;
+            display: none;
+            width: auto;
+            max-width: 640px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            text-align: center;
+            text-decoration: none !important;
+            font-family: "Open Sans", Arial, sans-serif;
+            font-weight: 700;
+            font-size: clamp(1.05rem, 2.4vw, 1.25rem);
+            line-height: 1.35;
+            padding: 16px 22px;
+            border-radius: 8px;
+            color: #fff !important;
+            background: #da074a !important;
+            box-shadow: 0 0 14px rgba(218, 7, 74, 0.55), 0 8px 22px rgba(218, 7, 74, 0.35);
+            white-space: normal !important;
+            overflow-wrap: break-word;
+        }
+
+        .sticky-cta.is-visible {
+            display: block;
+        }
+
+        @media screen and (max-width: 768px) {
+            .sticky-cta {
+                font-size: 1.08rem;
+                padding: 18px 12px;
+            }
+        }
     </style>
     
 <style id="vvvebjs-styles"></style>
@@ -1614,11 +1652,12 @@
                                     </ul>
                                     <p></p>
                                     <p class="lp-cta-wrap">
-                                        <a class="lp-cta" href="https://trk.smartselecttoday.online/click" target="_blank">
+                                        <a class="lp-cta" id="inpage-cta-1" href="https://trk.smartselecttoday.online/click" target="_blank">
                                             Sonderangebot von Osanix anzeigen →
                                         </a>
                                     </p>
-                                    <h2>Die drei Schwestern konnten sogar eine ganze Reihe Promis für sich gewinnen</h2>
+
+                                    <h2 style="font-weight: 800; line-height: 1.45; margin: 1.85rem 0 1.15rem !important; letter-spacing: -0.01em;">Die drei Schwestern konnten sogar eine ganze Reihe Promis für sich gewinnen</h2>
                                     <img src="./dmcc2_files/357_229.png" class="mw-100 align-center">
                                     <p><i class="img-caption"> Osanix ist unglaublich. Ich wurde gefragt ob ich diese Kapseln ausprobieren
                                         möchte und habe direkt ja gesagt. Ich habe nach der Einnahme viel weniger Hunger
@@ -1712,7 +1751,7 @@
                     <section class="module marketing full-width" style="height:auto;">
                         <div class="mk-wrapper">
                             <div class="mk-pic">
-                                <a href="https://trk.smartselecttoday.online/click" target="_blank"><img class="img-responsive repImg" src="./kumar/Untitled%20design%20(32).png" style="margin-bottom: 1.5rem;" alt=""></a>
+                                <a href="https://trk.smartselecttoday.online/click" target="_blank"><img class="img-responsive repImg" src="./kumar/Untitled%20design%20(32).png" style="margin-bottom: 1.5rem; width: 100%; max-width: 22rem;" alt=""></a>
                                 <img src="./dmcc2_files/image_1_.png" alt="">
                             </div>
                             <div class="mk-description" style="margin-top:0px;">
@@ -1721,7 +1760,7 @@
                                 <br>
                                 <span>Die Stückzahlen sind begrenzt. Klicken unten auf den Link um mehr zu erfahren:</span>
                                 <div class="cta-btn-wrap" style="margin:1rem 0;">
-                                    <a href="https://trk.smartselecttoday.online/click" target="_blank" class="new-action-button">
+                                    <a href="https://trk.smartselecttoday.online/click" target="_blank" class="new-action-button" id="inpage-cta-2">
                                         Sonderangebot von Osanix anzeigen →
                                     </a>
                                 </div>
@@ -2113,4 +2152,39 @@
 <a href="https://trk.smartselecttoday.online/click" style="display: none;"></a>
 <a href="https://trk.smartselecttoday.online/click" style="display: none;"></a>
 <a href="https://trk.smartselecttoday.online/click" style="display: none;"></a>
-<a href="https://trk.smartselecttoday.online/click" style="display: none;"></a></body></html>
+<a href="https://trk.smartselecttoday.online/click" style="display: none;"></a>
+<a class="sticky-cta" id="stickyCta" href="https://trk.smartselecttoday.online/click" target="_blank">Sonderangebot von Osanix anzeigen →</a>
+<script>
+  (function () {
+    var sticky = document.getElementById('stickyCta');
+    var firstCta = document.getElementById('inpage-cta-1');
+    var secondCta = document.getElementById('inpage-cta-2');
+    if (!sticky || !firstCta || !secondCta) return;
+
+    function isOnScreen(el) {
+      var rect = el.getBoundingClientRect();
+      var vh = window.innerHeight || document.documentElement.clientHeight;
+      return rect.top < vh - 8 && rect.bottom > 8;
+    }
+
+    function updateStickyCta() {
+      var passedFirst = firstCta.getBoundingClientRect().bottom < 8;
+      var hideForInpage = isOnScreen(firstCta) || isOnScreen(secondCta);
+      if (passedFirst && !hideForInpage) {
+        sticky.classList.add('is-visible');
+      } else {
+        sticky.classList.remove('is-visible');
+      }
+    }
+
+    document.addEventListener('scroll', updateStickyCta, true);
+    window.addEventListener('resize', updateStickyCta);
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(updateStickyCta, { threshold: [0, 0.01, 1] });
+      io.observe(firstCta);
+      io.observe(secondCta);
+    }
+    updateStickyCta();
+  })();
+</script>
+</body></html>
