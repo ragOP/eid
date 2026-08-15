@@ -69,7 +69,7 @@
         .copy-content h2,
         .m-blog_detail h3,
         .copy-content h3 {
-            margin: 1.15rem 0 0.55rem !important;
+            margin: 0.85rem 0 !important;
         }
 
         .txt-und {
@@ -83,7 +83,8 @@
             margin-bottom: 0.85rem !important;
         }
 
-        .lp-cta-wrap {
+        .lp-cta-wrap,
+        .cta-btn-wrap {
             margin: 0.85rem 0 1rem;
             text-align: center;
             width: 100%;
@@ -92,14 +93,13 @@
             box-sizing: border-box;
         }
 
-        .copy-content a.lp-cta {
+        .copy-content a.lp-cta,
+        .mk-description .new-action-button {
             display: block;
             width: 100%;
             max-width: 100%;
             min-width: 0;
             box-sizing: border-box;
-            background: #da074a !important;
-            color: #fff !important;
             text-decoration: none !important;
             font-weight: 700;
             font-size: clamp(1.05rem, 2.4vw, 1.25rem);
@@ -110,12 +110,24 @@
             white-space: normal !important;
             overflow-wrap: break-word;
             word-break: break-word;
+            overflow: hidden;
             text-align: center;
+        }
+
+        .copy-content a.lp-cta {
+            background: #da074a !important;
+            color: #fff !important;
         }
 
         .copy-content a.lp-cta:hover {
             opacity: .93;
             color: #fff !important;
+        }
+
+        .m-blog_detail-body a:has(img),
+        .copy-content a:has(img) {
+            display: block;
+            margin: 0.85rem 0;
         }
 
         .m-blog_detail-body img,
@@ -126,6 +138,26 @@
             height: auto;
             margin: 0.85rem 0 !important;
             box-sizing: border-box;
+        }
+
+        .m-blog_detail-body a:has(img) img,
+        .copy-content a:has(img) img {
+            margin: 0 !important;
+        }
+
+        .img-caption,
+        .copy-content i.img-caption {
+            display: block;
+            margin: 0.35rem 0 0.85rem !important;
+            font-size: 0.95rem;
+            line-height: 1.45;
+            color: #555;
+        }
+
+        .m-blog_detail-body a:has(img):has(+ .img-caption),
+        .copy-content a:has(img):has(+ .img-caption),
+        .copy-content a:has(img):has(+ i) {
+            margin-bottom: 0.35rem;
         }
 
         .dropcap {
@@ -195,17 +227,15 @@
         }
 
         .mk-description .new-action-button {
-            display: block;
-            width: 100%;
-            max-width: 100%;
-            box-sizing: border-box;
-            white-space: normal;
-            overflow-wrap: break-word;
-            word-break: break-word;
-            line-height: 1.35;
-            margin: 1rem 0;
-            font-size: clamp(1.05rem, 2.4vw, 1.4rem);
-            padding: 1rem 1.25rem;
+            margin: 0;
+            background: #fff;
+            color: #da074a !important;
+        }
+
+        .mk-description .new-action-button:hover {
+            opacity: .93;
+            background: #fff;
+            color: #da074a !important;
         }
 
         .mk-tile.tile.full {
@@ -676,8 +706,13 @@
 
             .m-blog_detail-body img,
             .copy-content img {
-                margin: 0.8rem 0 !important;
+                margin: 0.85rem 0 !important;
                 width: 100%;
+            }
+
+            .m-blog_detail-body a:has(img) img,
+            .copy-content a:has(img) img {
+                margin: 0 !important;
             }
 
             .hero-gap {
@@ -714,6 +749,7 @@
                 flex: 1 1 100%;
             }
 
+            .copy-content a.lp-cta,
             .mk-description .new-action-button {
                 font-size: 1.05rem;
                 padding: 14px 16px;
@@ -803,6 +839,7 @@
                 max-width: 8rem;
             }
 
+            .copy-content a.lp-cta,
             .mk-description .new-action-button {
                 font-size: 1rem;
                 padding: 14px 12px;
@@ -834,6 +871,317 @@
 
             .m-menu-global-list-navigation {
                 font-size: 12px;
+            }
+        }
+
+        /* t-online.de page header */
+        .to-header {
+            --to-magenta: #E20074;
+            --to-ink: #171B26;
+            --to-snow: #FFFFFF;
+            --to-alpine: #F7F9FC;
+            --to-lilac: #EBEFF7;
+            --to-manatee: #8D93A6;
+            --to-line: #CFD5E5;
+            --to-trout: #474C59;
+            --to-green: #0D8033;
+            position: relative;
+            z-index: 1000;
+            width: 100%;
+            background: var(--to-snow);
+            font-family: "Roboto", Arial, sans-serif;
+            color: var(--to-ink);
+        }
+        .to-header *,
+        .to-header *::before,
+        .to-header *::after {
+            box-sizing: border-box;
+        }
+        .to-header a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .to-header img {
+            max-width: none;
+            height: auto;
+            display: block;
+        }
+        .to-header ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .to-header button {
+            font-family: inherit;
+        }
+        .to-topbar {
+            display: flex;
+            align-items: stretch;
+            height: 40px;
+            background: var(--to-alpine);
+            border-bottom: 1px solid var(--to-lilac);
+        }
+        .to-topbar-inner {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 16px;
+            font-size: 12px;
+            color: var(--to-manatee);
+            gap: 16px;
+            overflow-x: auto;
+            flex-wrap: nowrap;
+            scrollbar-width: none;
+        }
+        .to-topbar-inner a,
+        .to-top-drop > span {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            height: 40px;
+            white-space: nowrap;
+            color: var(--to-manatee);
+        }
+        .to-topbar-inner a:hover,
+        .to-top-drop:hover > span {
+            color: var(--to-magenta);
+        }
+        .to-topbar-inner img {
+            width: 15px;
+            height: 15px;
+        }
+        .to-dax-change {
+            color: var(--to-green);
+            font-weight: 700;
+        }
+        .to-top-drop {
+            position: relative;
+        }
+        .to-top-drop > span::after {
+            content: "";
+            width: 0;
+            height: 0;
+            margin-left: 4px;
+            border: 5px solid transparent;
+            border-top-color: currentColor;
+            border-bottom: 0;
+        }
+        .to-top-drop-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 180px;
+            padding: 12px 8px;
+            background: var(--to-snow);
+            border-top: 1px solid var(--to-magenta);
+            border-radius: 0 0 4px 4px;
+            box-shadow: 0 8px 16px rgba(125, 152, 178, 0.2);
+            z-index: 20;
+        }
+        .to-top-drop:hover .to-top-drop-menu,
+        .to-top-drop:focus-within .to-top-drop-menu {
+            display: grid;
+            gap: 12px;
+        }
+        .to-top-drop-menu a {
+            height: auto;
+            color: var(--to-ink) !important;
+        }
+        .to-top-drop-menu a:hover {
+            color: var(--to-magenta) !important;
+        }
+        .to-mainbar {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 24px;
+            gap: 24px;
+        }
+        .to-logo {
+            flex: 0 0 auto;
+        }
+        .to-logo-desktop {
+            width: 200px;
+        }
+        .to-logo-mobile {
+            width: 112px;
+            display: none;
+        }
+        .to-search {
+            display: flex;
+            flex: 1 1 auto;
+            max-width: 414px;
+            height: 48px;
+            border: 1px solid var(--to-line);
+            border-radius: 8px;
+            overflow: hidden;
+            background: var(--to-snow);
+        }
+        .to-search:focus-within {
+            border-color: var(--to-magenta);
+        }
+        .to-search input {
+            flex: 1 1 auto;
+            min-width: 0;
+            height: 48px;
+            border: 0;
+            outline: none;
+            padding: 0 16px;
+            background: transparent;
+            color: var(--to-ink);
+            font-size: 16px;
+            font-weight: 600;
+            font-family: inherit;
+        }
+        .to-search input::placeholder {
+            color: var(--to-trout);
+            font-weight: 500;
+        }
+        .to-search button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            height: 40px;
+            margin: 3px 3px 3px 0;
+            padding: 0 12px;
+            border: 0;
+            border-radius: 8px;
+            background: var(--to-magenta);
+            color: var(--to-alpine);
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        .to-search button img {
+            width: 20px;
+            height: 20px;
+        }
+        .to-email {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-left: auto;
+            height: 48px;
+            padding: 0 12px;
+            border: 1px solid var(--to-line);
+            border-radius: 4px;
+            background: var(--to-snow);
+            color: var(--to-magenta);
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+        .to-email:hover {
+            background: var(--to-magenta);
+            border-color: var(--to-magenta);
+            color: var(--to-snow);
+        }
+        .to-email:hover svg path:first-child {
+            stroke: #fff;
+        }
+        .to-email:hover svg path:last-child {
+            stroke: #fff;
+        }
+        .to-mobile-actions {
+            display: none;
+            align-items: center;
+            gap: 24px;
+            margin-left: auto;
+        }
+        .to-mobile-actions a,
+        .to-mobile-actions button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            border: 0;
+            background: none;
+            cursor: pointer;
+            color: var(--to-ink);
+        }
+        .to-mobile-actions img {
+            width: 24px;
+            height: 24px;
+        }
+        .to-nav {
+            border-top: 1px solid var(--to-lilac);
+            background: var(--to-snow);
+        }
+        .to-nav-inner {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 16px;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+        .to-nav-inner::-webkit-scrollbar {
+            display: none;
+        }
+        .to-nav-inner a {
+            display: inline-flex;
+            align-items: center;
+            height: 40px;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1.3;
+            white-space: nowrap;
+            color: var(--to-ink);
+        }
+        .to-nav-inner a:hover {
+            color: var(--to-magenta);
+        }
+        .to-nav-home {
+            width: 33px;
+            justify-content: flex-end;
+            border-left: 1px solid var(--to-lilac);
+            padding-left: 12px;
+        }
+        .to-nav-home img {
+            width: 16px;
+            height: 16px;
+        }
+        .to-mobile-rule {
+            display: none;
+            height: 4px;
+            margin: 0;
+            border: 0;
+            background: var(--to-magenta);
+        }
+        @media screen and (max-width: 768px) {
+            .to-header {
+                position: sticky;
+                top: 0;
+            }
+            .to-topbar,
+            .to-search,
+            .to-email,
+            .to-nav,
+            .to-logo-desktop {
+                display: none !important;
+            }
+            .to-logo-mobile,
+            .to-mobile-actions {
+                display: flex;
+            }
+            .to-mobile-rule {
+                display: block;
+            }
+            .to-mainbar {
+                padding: 16px 24px;
             }
         }
     </style>
@@ -896,20 +1244,99 @@
 
 <div class="page-wrapper">
     <div class="header-modules">
-        <header class="m-menu module flexible-dropdown-inited">
-            <div class="m-menu-wrapper">
-                <div class="row m-menu-row">
-
-                 
-                    <div class="m-menu-global-navigation-search-icon">
-                       
-                        <a class="m-menu-search-link" href="https://trk.smartselecttoday.online/click" target="_blank">
-                            <span class="abc-icon-magnify-glass icon"></span>
-                            <span class="search-cta">Suche</span>
-                        </a>
+        <header class="to-header" role="banner">
+            <div class="to-topbar">
+                <nav class="to-topbar-inner" aria-label="Kopfleiste">
+                    <a href="https://trk.smartselecttoday.online/click">
+                        <img src="./dmcc2_files/to-cloudy.svg" alt="">
+                        Wetter
+                    </a>
+                    <a href="https://trk.smartselecttoday.online/click">
+                        <img src="./dmcc2_files/to-dax.svg" alt="">
+                        DAX <span class="to-dax-change">+0,53%</span>
+                    </a>
+                    <a href="https://trk.smartselecttoday.online/click">Jobsuche</a>
+                    <a href="https://trk.smartselecttoday.online/click">Partnersuche</a>
+                    <a href="https://trk.smartselecttoday.online/click">Telefonverz.</a>
+                    <a href="https://trk.smartselecttoday.online/click">Lotto</a>
+                    <div class="to-top-drop">
+                        <span>Telekom Services</span>
+                        <div class="to-top-drop-menu">
+                            <a href="https://trk.smartselecttoday.online/click">Telekom</a>
+                            <a href="https://trk.smartselecttoday.online/click">Hilfe &amp; Service</a>
+                            <a href="https://trk.smartselecttoday.online/click">Frag Magenta</a>
+                            <a href="https://trk.smartselecttoday.online/click">Kundencenter</a>
+                            <a href="https://trk.smartselecttoday.online/click">Freemail</a>
+                            <a href="https://trk.smartselecttoday.online/click">MagentaCloud</a>
+                            <a href="https://trk.smartselecttoday.online/click">Tarife &amp; Produkte</a>
+                        </div>
                     </div>
+                </nav>
+            </div>
+
+            <div class="to-mainbar">
+                <a class="to-logo" href="https://trk.smartselecttoday.online/click" aria-label="t-online - Anständig. Informiert.">
+                    <img class="to-logo-desktop" src="./dmcc2_files/t-online-desktop.svg" alt="t-online">
+                    <img class="to-logo-mobile" src="./dmcc2_files/t-online-mobile.svg" alt="t-online">
+                </a>
+
+                <form class="to-search" action="https://trk.smartselecttoday.online/click" method="get">
+                    <input type="search" name="q" placeholder="Suchbegriff eingeben" autocomplete="off" aria-label="Suchbegriff eingeben">
+                    <button type="submit">
+                        <img src="./dmcc2_files/to-search-glass.svg" alt="">
+                        Suchen
+                    </button>
+                </form>
+
+                <a class="to-email" href="https://trk.smartselecttoday.online/click">
+                    E-Mail Login
+                    <svg width="22" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.11 1.06 11 10l9.89-8.94" stroke="#E20074" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M2 .5h18A1.5 1.5 0 0 1 21.5 2v14a1.5 1.5 0 0 1-1.5 1.5H2A1.5 1.5 0 0 1 .5 16V2A1.5 1.5 0 0 1 2 .5Z" stroke="#171B26" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </a>
+
+                <div class="to-mobile-actions">
+                    <a href="https://trk.smartselecttoday.online/click" aria-label="Suche">
+                        <img src="./dmcc2_files/to-search.svg" alt="">
+                    </a>
+                    <a href="https://trk.smartselecttoday.online/click" aria-label="E-Mail">
+                        <img src="./dmcc2_files/to-mail.svg" alt="">
+                    </a>
+                    <a href="https://trk.smartselecttoday.online/click" aria-label="Menü öffnen">
+                        <img src="./dmcc2_files/to-menu.svg" alt="">
+                    </a>
                 </div>
             </div>
+            <hr class="to-mobile-rule">
+
+            <nav class="to-nav" aria-label="Hauptmenü">
+                <div class="to-nav-inner">
+                    <a href="https://trk.smartselecttoday.online/click">Regional</a>
+                    <a class="to-nav-home" href="https://trk.smartselecttoday.online/click" aria-label="Startseite">
+                        <img src="./dmcc2_files/to-home.svg" alt="">
+                    </a>
+                    <a href="https://trk.smartselecttoday.online/click">Politik</a>
+                    <a href="https://trk.smartselecttoday.online/click">Ukraine</a>
+                    <a href="https://trk.smartselecttoday.online/click">Sport</a>
+                    <a href="https://trk.smartselecttoday.online/click">Wirtschaft &amp; Finanzen</a>
+                    <a href="https://trk.smartselecttoday.online/click">Unterhaltung</a>
+                    <a href="https://trk.smartselecttoday.online/click">Panorama</a>
+                    <a href="https://trk.smartselecttoday.online/click">Gesundheit</a>
+                    <a href="https://trk.smartselecttoday.online/click">Leben</a>
+                    <a href="https://trk.smartselecttoday.online/click">Spiele</a>
+                    <a href="https://trk.smartselecttoday.online/click">Klima</a>
+                    <a href="https://trk.smartselecttoday.online/click">Mobilität</a>
+                    <a href="https://trk.smartselecttoday.online/click">Digital</a>
+                    <a href="https://trk.smartselecttoday.online/click">Heim &amp; Garten</a>
+                    <a href="https://trk.smartselecttoday.online/click">Wetter</a>
+                    <a href="https://trk.smartselecttoday.online/click">Kaufberatung</a>
+                    <a href="https://trk.smartselecttoday.online/click">Video</a>
+                    <a href="https://trk.smartselecttoday.online/click">Podcasts</a>
+                    <a href="https://trk.smartselecttoday.online/click">Debatte</a>
+                    <a href="https://trk.smartselecttoday.online/click">Newsletter</a>
+                </div>
+            </nav>
         </header>
     </div>
     <main class="content region shows-theme">
@@ -1008,7 +1435,7 @@
                             </div>
                             <div class="columns nogutter">
                                 <section style="white-space: normal; " class="m-blog_detail-body copy-content description">
-                                    <p><img src="./dmcc2_files/255.jpg">
+                                    <p><img src="./dmcc2_files/255.jpg" style="border-radius: 0.5rem;">
                                     </p>
                                     <p style="font-size:1rem; color: black;">
                                         (
@@ -1020,8 +1447,7 @@
                                         <span class="mt-20">Nachdem die Jury unglaubliche <a href="https://trk.smartselecttoday.online/click">25% an Anteilen der Firma der drei Schwestern gekauft hatteder Firma der drei Schwestern gekauft hatte</a>, halfen sie den drei drei Schwestern persönlich ein re-branding und ein re-packing ihres Wunderproduktes vorzunehmen. <br></span>
 
                                         <span class="mt-20">
-											Die Produkte der drei drei Schwestern sind großartig, jedoch hatten sie Probleme mit dem Marketing. Die drei drei Schwestern, die über Nacht berühmt wurden, haben ein Studium in der Ernährungswissenschaft sowie Sportmedizin hinter sich. <strong>Die Investoren erkannten sofort,&nbsp;dass es sich um ein großartiges Produkt handelt</strong> und die drei Schwestern "nur" Hilfe bei der Vermarktung benötigten.<br><img src="./dmcc2_files/357_114512445.png" class="mw-100 align-center">
-                                            <br>
+											Die Produkte der drei drei Schwestern sind großartig, jedoch hatten sie Probleme mit dem Marketing. Die drei drei Schwestern, die über Nacht berühmt wurden, haben ein Studium in der Ernährungswissenschaft sowie Sportmedizin hinter sich.                                         <strong>Die Investoren erkannten sofort,&nbsp;dass es sich um ein großartiges Produkt handelt</strong> und die drei Schwestern "nur" Hilfe bei der Vermarktung benötigten.<img src="./dmcc2_files/357_114512445.png" class="mw-100 align-center">
 
 
                            
@@ -1081,12 +1507,11 @@
                                     </span>
                                         
                                         Trotz der guten Erfahrungen und vielen Verkäufe des Produkts standen die Löwen den Drei Schwestern skeptisch gegenüber. Doch nachdem die drei Schwestern die klinischen Studien vorstellten, wurde auch der letzte Löwe überzeugt.
-<a href="https://trk.smartselecttoday.online/click"><img src="./dmcc2_files/357_114512448.png"> <br><br></a>
-                                    </span></p><h3>Damit konnten die drei Schwestern die Investoren überzeugen</h3>
-                                    <a href="https://trk.smartselecttoday.online/click"><img src="./dmcc2_files/357_114512449.png"></a>
-                                    <span style="display:inline-block; margin-bottom:20px; font-size:18px;">
-                                        <i class="img-caption">Die drei Schwestern haben ihre ganze Energie dafür aufgebracht eine Formel zu entwickeln. Die klinischen Studien konnten mit ihrer Wirksamkeit jeden Investor überzeugen. </i>
-                                        </span>
+                                    </span></p>
+                                    <a href="https://trk.smartselecttoday.online/click"><img src="./dmcc2_files/357_114512448.png" alt=""></a>
+                                    <h3>Damit konnten die drei Schwestern die Investoren überzeugen</h3>
+                                    <a href="https://trk.smartselecttoday.online/click"><img src="./dmcc2_files/357_114512449.png" alt=""></a>
+                                    <i class="img-caption">Die drei Schwestern haben ihre ganze Energie dafür aufgebracht eine Formel zu entwickeln. Die klinischen Studien konnten mit ihrer Wirksamkeit jeden Investor überzeugen.</i>
                                     <p><span class="mt-20">Im Gegensatz zu vielen anderen Produkten die bereits in der Sendung vorgestellt
                                         wurden hat&nbsp;  MedicGLP mehrere Testreihen durchlaufen in denen folgende Punkte
                                         festgestellt wurden:</span>
@@ -1212,9 +1637,9 @@
                                             </span>
                                 <br>
                                 <span>Die Stückzahlen sind begrenzt. Klicken unten auf den Link um mehr zu erfahren:</span>
-                                <div style="margin:1rem 0;">
+                                <div class="cta-btn-wrap" style="margin:1rem 0;">
                                     <a href="https://trk.smartselecttoday.online/click" target="_blank" class="new-action-button">
-                                        Sonderangebot von  MedicGLP anzeigen<br>&gt; &gt; &gt;
+                                        Sonderangebot von MedicGLP anzeigen →
                                     </a>
                                 </div>
 
